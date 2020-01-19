@@ -1,34 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library, IconProp } from '@fortawesome/fontawesome-svg-core';
-import {
-  faCalendar,
-  faStar,
-  faMap,
-  faGavel,
-  faSearchLocation,
-  faSignInAlt,
-  faSignOutAlt,
-  faUserPlus,
-  faBookmark,
-} from '@fortawesome/free-solid-svg-icons';
-import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 import { useHistory } from 'react-router-dom';
 import NavigationButton from '../components/NavigationButton';
 import { AppContext } from '../App';
-
-library.add(
-  faCalendar,
-  faStar,
-  faMap,
-  faGavel,
-  faSearchLocation,
-  faSignInAlt,
-  faSignOutAlt,
-  faUserPlus,
-  faBookmark,
-  faDiscord
-);
 
 interface NavObj {
   path: string;
@@ -37,16 +13,16 @@ interface NavObj {
 }
 
 const navItems: NavObj[] = [
-  { path: '/schedule', icon: 'calendar', label: 'Schedule' },
+  { path: '/schedule', icon: 'calendar', label: 'Event Schedule' },
   { path: '/special-guests', icon: 'star', label: 'Special Guest' },
   { path: '/floor-map', icon: 'map', label: 'Floor Map' },
   { path: '/rules', icon: 'gavel', label: 'Rules' },
   { path: '/discord', icon: ['fab', 'discord'], label: 'Discord' },
   { path: '/local-guide', icon: 'search-location', label: 'Local Guide' },
   { path: '/bookmarks', icon: 'bookmark', label: 'Your Bookmarks' },
-  { path: '/login', icon: 'sign-in-alt', label: 'Login' },
-  { path: '/logout', icon: 'sign-out-alt', label: 'Logout' },
-  { path: '/register', icon: 'user-plus', label: 'Register' },
+  { path: '/login', icon: 'sign-in-alt', label: 'Log in' },
+  { path: '/logout', icon: 'sign-out-alt', label: 'Log out' },
+  { path: '/signup', icon: 'user-plus', label: 'Sign up' },
 ];
 
 const Home: React.FC = () => {
@@ -67,13 +43,14 @@ const Home: React.FC = () => {
       {navItems
         .filter(item =>
           user
-            ? item.path !== '/login'
-            : item.path !== '/logout' && item.label !== '/bookmarks'
+            ? item.path !== '/login' && item.path !== '/signup'
+            : item.path !== '/logout' && item.path !== '/bookmarks'
         )
         .map((item, index, array) => {
+          const offset = user ? 1 : 2;
           return (
             <React.Fragment key={item.label}>
-              {index === array.length - 2 && (
+              {index === array.length - offset && (
                 <hr className="border-green-800 w-11/12 mx-auto my-6" />
               )}
               <div className={index === 0 ? 'mb-3' : 'my-3'}>

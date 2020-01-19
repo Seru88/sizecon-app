@@ -10,7 +10,7 @@ const Logout: React.FC = () => {
       .auth()
       .signOut()
       .then(() => history.push('/'));
-  }, []);
+  }, [history]);
 
   return <div>Logging you out...</div>;
 };

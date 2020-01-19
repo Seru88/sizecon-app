@@ -1,5 +1,20 @@
 import 'firebase/auth';
+import 'firebase/database'
 
+import { library as iconLibray } from '@fortawesome/fontawesome-svg-core';
+import { faDiscord, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import {
+  faBookmark,
+  faCalendar,
+  faGavel,
+  faMap,
+  faSearchLocation,
+  faSignInAlt,
+  faSignOutAlt,
+  faStar,
+  faUserPlus,
+  faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
 import * as firebase from 'firebase/app';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -17,6 +32,24 @@ export const firebaseApp = firebase.initializeApp({
   appId: '1:131991271247:web:59f712a00312132743f73a',
 });
 
+export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+iconLibray.add(
+  faCalendar,
+  faStar,
+  faMap,
+  faGavel,
+  faSearchLocation,
+  faSignInAlt,
+  faSignOutAlt,
+  faUserPlus,
+  faBookmark,
+  faEnvelope,
+  faDiscord,
+  faGoogle,
+  faTwitter
+);
+
 export const AppContext = React.createContext<{
   user: firebase.User | undefined;
 }>({
@@ -33,7 +66,7 @@ const App: React.FC = () => {
         ) : (
           <>
             <Header />
-            <main className="p-8">{routes}</main>
+            <main className="p-6 max-w-sm mx-auto">{routes}</main>
           </>
         )}
       </div>

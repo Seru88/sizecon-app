@@ -14,14 +14,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { firebaseApp } from '../App';
 import Bookmarks from './Bookmarks';
 import Logout from './Logout';
+import Signup from './Signup';
 
 const ProtectedRoute: React.FC<RouteProps> = props => {
   const { path, exact, component } = props;
-  const [user, initialising, error] = useAuthState(firebaseApp.auth());
+  const [user,] = useAuthState(firebaseApp.auth());
   const Component = component as React.ComponentType<any>;
-  if (initialising) {
-    return <div>Loading...</div>;
-  }
 
   const render = (props: any) => {
     if (user) {
@@ -41,6 +39,7 @@ const routes = (
       <Route exact path="/special-guests" component={SpecialGuests} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/logout" component={Logout} />
+      <Route exact path="/signup" component={Signup} />
       <ProtectedRoute exact path="/bookmarks" component={Bookmarks} />
     </Switch>
   </BrowserRouter>

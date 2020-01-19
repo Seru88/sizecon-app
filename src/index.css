@@ -1059,6 +1059,18 @@ video {
   background-color: #702459;
 }
 
+.bg-twitter-lighter {
+  background-color: #2bc4ff;
+}
+
+.bg-twitter {
+  background-color: #00acee;
+}
+
+.bg-twitter-darker {
+  background-color: #008abe;
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -1431,6 +1443,18 @@ video {
   background-color: #702459;
 }
 
+.hover\:bg-twitter-lighter:hover {
+  background-color: #2bc4ff;
+}
+
+.hover\:bg-twitter:hover {
+  background-color: #00acee;
+}
+
+.hover\:bg-twitter-darker:hover {
+  background-color: #008abe;
+}
+
 .focus\:bg-transparent:focus {
   background-color: transparent;
 }
@@ -1801,6 +1825,18 @@ video {
 
 .focus\:bg-pink-900:focus {
   background-color: #702459;
+}
+
+.focus\:bg-twitter-lighter:focus {
+  background-color: #2bc4ff;
+}
+
+.focus\:bg-twitter:focus {
+  background-color: #00acee;
+}
+
+.focus\:bg-twitter-darker:focus {
+  background-color: #008abe;
 }
 
 .bg-bottom {
@@ -11068,6 +11104,18 @@ video {
     background-color: #702459;
   }
 
+  .sm\:bg-twitter-lighter {
+    background-color: #2bc4ff;
+  }
+
+  .sm\:bg-twitter {
+    background-color: #00acee;
+  }
+
+  .sm\:bg-twitter-darker {
+    background-color: #008abe;
+  }
+
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -11440,6 +11488,18 @@ video {
     background-color: #702459;
   }
 
+  .sm\:hover\:bg-twitter-lighter:hover {
+    background-color: #2bc4ff;
+  }
+
+  .sm\:hover\:bg-twitter:hover {
+    background-color: #00acee;
+  }
+
+  .sm\:hover\:bg-twitter-darker:hover {
+    background-color: #008abe;
+  }
+
   .sm\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -11810,6 +11870,18 @@ video {
 
   .sm\:focus\:bg-pink-900:focus {
     background-color: #702459;
+  }
+
+  .sm\:focus\:bg-twitter-lighter:focus {
+    background-color: #2bc4ff;
+  }
+
+  .sm\:focus\:bg-twitter:focus {
+    background-color: #00acee;
+  }
+
+  .sm\:focus\:bg-twitter-darker:focus {
+    background-color: #008abe;
   }
 
   .sm\:bg-bottom {
@@ -21078,6 +21150,18 @@ video {
     background-color: #702459;
   }
 
+  .md\:bg-twitter-lighter {
+    background-color: #2bc4ff;
+  }
+
+  .md\:bg-twitter {
+    background-color: #00acee;
+  }
+
+  .md\:bg-twitter-darker {
+    background-color: #008abe;
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -21450,6 +21534,18 @@ video {
     background-color: #702459;
   }
 
+  .md\:hover\:bg-twitter-lighter:hover {
+    background-color: #2bc4ff;
+  }
+
+  .md\:hover\:bg-twitter:hover {
+    background-color: #00acee;
+  }
+
+  .md\:hover\:bg-twitter-darker:hover {
+    background-color: #008abe;
+  }
+
   .md\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -21820,6 +21916,18 @@ video {
 
   .md\:focus\:bg-pink-900:focus {
     background-color: #702459;
+  }
+
+  .md\:focus\:bg-twitter-lighter:focus {
+    background-color: #2bc4ff;
+  }
+
+  .md\:focus\:bg-twitter:focus {
+    background-color: #00acee;
+  }
+
+  .md\:focus\:bg-twitter-darker:focus {
+    background-color: #008abe;
   }
 
   .md\:bg-bottom {
@@ -31088,6 +31196,18 @@ video {
     background-color: #702459;
   }
 
+  .lg\:bg-twitter-lighter {
+    background-color: #2bc4ff;
+  }
+
+  .lg\:bg-twitter {
+    background-color: #00acee;
+  }
+
+  .lg\:bg-twitter-darker {
+    background-color: #008abe;
+  }
+
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -31460,6 +31580,18 @@ video {
     background-color: #702459;
   }
 
+  .lg\:hover\:bg-twitter-lighter:hover {
+    background-color: #2bc4ff;
+  }
+
+  .lg\:hover\:bg-twitter:hover {
+    background-color: #00acee;
+  }
+
+  .lg\:hover\:bg-twitter-darker:hover {
+    background-color: #008abe;
+  }
+
   .lg\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -31830,6 +31962,18 @@ video {
 
   .lg\:focus\:bg-pink-900:focus {
     background-color: #702459;
+  }
+
+  .lg\:focus\:bg-twitter-lighter:focus {
+    background-color: #2bc4ff;
+  }
+
+  .lg\:focus\:bg-twitter:focus {
+    background-color: #00acee;
+  }
+
+  .lg\:focus\:bg-twitter-darker:focus {
+    background-color: #008abe;
   }
 
   .lg\:bg-bottom {
@@ -41098,6 +41242,18 @@ video {
     background-color: #702459;
   }
 
+  .xl\:bg-twitter-lighter {
+    background-color: #2bc4ff;
+  }
+
+  .xl\:bg-twitter {
+    background-color: #00acee;
+  }
+
+  .xl\:bg-twitter-darker {
+    background-color: #008abe;
+  }
+
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -41470,6 +41626,18 @@ video {
     background-color: #702459;
   }
 
+  .xl\:hover\:bg-twitter-lighter:hover {
+    background-color: #2bc4ff;
+  }
+
+  .xl\:hover\:bg-twitter:hover {
+    background-color: #00acee;
+  }
+
+  .xl\:hover\:bg-twitter-darker:hover {
+    background-color: #008abe;
+  }
+
   .xl\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -41840,6 +42008,18 @@ video {
 
   .xl\:focus\:bg-pink-900:focus {
     background-color: #702459;
+  }
+
+  .xl\:focus\:bg-twitter-lighter:focus {
+    background-color: #2bc4ff;
+  }
+
+  .xl\:focus\:bg-twitter:focus {
+    background-color: #00acee;
+  }
+
+  .xl\:focus\:bg-twitter-darker:focus {
+    background-color: #008abe;
   }
 
   .xl\:bg-bottom {

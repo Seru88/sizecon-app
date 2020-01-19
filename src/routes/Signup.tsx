@@ -1,8 +1,8 @@
 import React from 'react';
 import AuthenticationForm from '../components/AuthenticationForm';
 
-const Register: React.FC = () => {
+const Signup: React.FC = () => {
   return <AuthenticationForm registering/>
 }
 
-export default Register;
+export default Signup;
