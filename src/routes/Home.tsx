@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import { useHistory } from 'react-router-dom';
-import NavigationButton from '../components/NavigationButton';
-import { AppContext } from '../App';
+import NavigationButton from '../components/Button';
+import Button from '../components/Button';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import firebaseApp from '../util/firebaseApp';
 
 interface NavObj {
   path: string;
@@ -28,7 +30,7 @@ const navItems: NavObj[] = [
 const Home: React.FC = () => {
   const history = useHistory();
 
-  const { user } = React.useContext(AppContext);
+  const [user] = useAuthState(firebaseApp.auth());
 
   const handleClick = (path: string) => () => {
     if (path === '/discord') {
@@ -54,13 +56,13 @@ const Home: React.FC = () => {
                 <hr className="border-green-800 w-11/12 mx-auto my-6" />
               )}
               <div className={index === 0 ? 'mb-3' : 'my-3'}>
-                <NavigationButton onClick={handleClick(item.path)} fullwidth>
+                <Button onClick={handleClick(item.path)} fullwidth>
                   <div className="w-8 inline-block">
                     <FontAwesomeIcon icon={item.icon} />
                   </div>
                   {` `}
                   {item.label}
-                </NavigationButton>
+                </Button>
               </div>
             </React.Fragment>
           );

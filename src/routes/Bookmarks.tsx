@@ -1,6 +1,5 @@
 import React from 'react';
-import { useCollection } from 'react-firebase-hooks/firestore';
-import { firebaseApp } from '../App';
+// import firebaseApp from '../util/firebaseApp';
 
 const Bookmarks: React.FC = () => {
   // const [value, loading, error] = useCollection(firebaseApp.fire)

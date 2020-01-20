@@ -1,9 +1,13 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import eventSchedule from '../assets/schedule.json';
-import getFormattedEventTime from '../util/getFormattedEventTime';
-import NavigationButton from '../components/NavigationButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useParams } from 'react-router-dom';
+
+import eventSchedule from '../assets/schedule.json';
+import Button from '../components/Button';
+import firebaseApp from '../util/firebaseApp';
+import getFormattedEventTime from '../util/getFormattedEventTime';
+import useAlert from '../hooks/useAlert';
 
 const Event: React.FC = () => {
   const { slug } = useParams();
@@ -11,6 +15,16 @@ const Event: React.FC = () => {
   const dayTwo = eventSchedule.schedule_2020.day_two.events;
   const events = dayOne.concat(dayTwo);
   const event = events.find(event => event.slug === slug);
+
+  const [user] = useAuthState(firebaseApp.auth());
+  const { enqueueAlert } = useAlert();
+
+  const handleBookmark = () => {
+    if (user) {
+    } else {
+      enqueueAlert('You must be logged in to bookmark', { variant: 'error' });
+    }
+  };
 
   if (event === undefined) return null;
 
@@ -30,12 +44,12 @@ const Event: React.FC = () => {
         ))}
       <div className="text-xs my-3">Notes ...</div>
       <div className="mt-10 mb-4">
-        <NavigationButton fullwidth>
+        <Button fullwidth onClick={handleBookmark}>
           <div className="w-8 inline-block">
             <FontAwesomeIcon icon="plus" />
           </div>
           {` `}Add to bookmark
-        </NavigationButton>
+        </Button>
       </div>
     </div>
   );

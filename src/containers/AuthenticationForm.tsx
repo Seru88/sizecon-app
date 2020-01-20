@@ -1,10 +1,11 @@
 import React from 'react';
-import { firebaseApp, AppContext, googleAuthProvider } from '../App';
-// import { useAuthState } from 'react-firebase-hooks/auth';
 import { Redirect, Link } from 'react-router-dom';
-import NavigationButton from './NavigationButton';
+import NavigationButton from '../components/Button';
 import { useForm, FieldError } from 'react-hook-form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import firebaseApp from '../util/firebaseApp';
+import { googleAuthProvider } from '../util/firebaseApp';
 
 const AuthenticationForm: React.FC<{ registering?: boolean }> = props => {
   const { registering } = props;
@@ -13,7 +14,7 @@ const AuthenticationForm: React.FC<{ registering?: boolean }> = props => {
 
   const { register, handleSubmit, errors: validationErrors } = useForm();
 
-  const { user } = React.useContext(AppContext);
+  const [user] = useAuthState(firebaseApp.auth());
 
   const login = (data: Record<string, any>) => {
     firebaseApp

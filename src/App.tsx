@@ -1,39 +1,28 @@
-import 'firebase/auth';
-import 'firebase/database'
-
 import { library as iconLibray } from '@fortawesome/fontawesome-svg-core';
-import { faDiscord, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import {
+  faDiscord,
+  faGoogle,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 import {
   faBookmark,
   faCalendar,
+  faEnvelope,
   faGavel,
   faMap,
+  faPlus,
   faSearchLocation,
   faSignInAlt,
   faSignOutAlt,
   faStar,
   faUserPlus,
-  faEnvelope,
-  faPlus,
 } from '@fortawesome/free-solid-svg-icons';
-import * as firebase from 'firebase/app';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
-import Header from './components/Header';
 import routes from './routes';
-
-export const firebaseApp = firebase.initializeApp({
-  apiKey: 'AIzaSyAGNIex01Bc1hnKuXTMWPQ7zD-s5q8CDM0',
-  authDomain: 'sizecon-app.firebaseapp.com',
-  databaseURL: 'https://sizecon-app.firebaseio.com',
-  projectId: 'sizecon-app',
-  storageBucket: 'sizecon-app.appspot.com',
-  messagingSenderId: '131991271247',
-  appId: '1:131991271247:web:59f712a00312132743f73a',
-});
-
-export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+import firebaseApp from './util/firebaseApp';
+import AlertProvider from './containers/AlertProvider';
 
 iconLibray.add(
   faCalendar,
@@ -66,10 +55,10 @@ const App: React.FC = () => {
         {initialising ? (
           <div>Loading...</div>
         ) : (
-          <>
-            <Header />
+          <AlertProvider>
+            {/* <Header /> */}
             <main className="p-6 max-w-sm mx-auto">{routes}</main>
-          </>
+          </AlertProvider>
         )}
       </div>
     </AppContext.Provider>

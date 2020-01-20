@@ -1,6 +1,6 @@
 import React from 'react';
-import { firebaseApp } from '../App';
 import { useHistory } from 'react-router-dom';
+import firebaseApp from '../util/firebaseApp';
 
 const Logout: React.FC = () => {
   const history = useHistory();

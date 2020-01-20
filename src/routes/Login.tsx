@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthenticationForm from '../components/AuthenticationForm';
+import AuthenticationForm from '../containers/AuthenticationForm';
 
 const Login: React.FC = () => {
   return <AuthenticationForm />;
