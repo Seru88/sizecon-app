@@ -5,42 +5,58 @@ import SpecialGuests from './SpecialGuests';
 import Login from './Login';
 import {
   BrowserRouter,
-  Redirect,
+  // Redirect,
   Route,
-  RouteProps,
+  // RouteProps,
   Switch,
 } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { firebaseApp } from '../App';
-import Bookmarks from './Bookmarks';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { firebaseApp } from '../App';
+// import Bookmarks from './Bookmarks';
 import Logout from './Logout';
 import Signup from './Signup';
+import Event from './Event';
 
-const ProtectedRoute: React.FC<RouteProps> = props => {
-  const { path, exact, component } = props;
-  const [user,] = useAuthState(firebaseApp.auth());
-  const Component = component as React.ComponentType<any>;
+// const ProtectedRoute: React.FC<RouteProps> = props => {
+//   const { path, exact, component } = props;
+//   const [user] = useAuthState(firebaseApp.auth());
+//   const Component = component as React.ComponentType<any>;
 
-  const render = (props: any) => {
-    if (user) {
-      return <Component {...props} />;
-    }
-    return <Redirect to="/login" />;
-  };
+//   const render = (props: any) => {
+//     if (user) {
+//       return <Component {...props} />;
+//     }
+//     return <Redirect to="/login" />;
+//   };
 
-  return <Route path={path} exact={exact} render={render} />;
-};
+//   return <Route path={path} exact={exact} render={render} />;
+// };
 
 const routes = (
   <BrowserRouter basename="/">
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/schedule" component={Schedule} />
-      <Route exact path="/special-guests" component={SpecialGuests} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/logout" component={Logout} />
-      <Route exact path="/signup" component={Signup} />
-      <ProtectedRoute exact path="/bookmarks" component={Bookmarks} />
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/schedule">
+        <Schedule />
+      </Route>
+      <Route exact path="/special-guests">
+        <SpecialGuests />
+      </Route>
+      <Route exact path="/event/:slug">
+        <Event/>
+      </Route>
+      <Route exact path="/login">
+        <Login />
+      </Route>
+      <Route exact path="/logout">
+        <Logout />
+      </Route>
+      <Route exact path="/signup">
+        <Signup />
+      </Route>
+      {/* <ProtectedRoute exact path="/bookmarks" component={Bookmarks} /> */}
     </Switch>
   </BrowserRouter>
 );

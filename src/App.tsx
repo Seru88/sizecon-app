@@ -14,6 +14,7 @@ import {
   faStar,
   faUserPlus,
   faEnvelope,
+  faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import * as firebase from 'firebase/app';
 import React from 'react';
@@ -45,6 +46,7 @@ iconLibray.add(
   faUserPlus,
   faBookmark,
   faEnvelope,
+  faPlus,
   faDiscord,
   faGoogle,
   faTwitter
