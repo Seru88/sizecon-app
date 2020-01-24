@@ -6,31 +6,37 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import firebaseApp from '../util/firebaseApp';
 import { googleAuthProvider } from '../util/firebaseApp';
+import useAlert from '../hooks/useAlert';
 
 const AuthenticationForm: React.FC<{ registering?: boolean }> = props => {
   const { registering } = props;
-
-  const [error, setError] = React.useState();
-
   const { register, handleSubmit, errors: validationErrors } = useForm();
-
   const [user] = useAuthState(firebaseApp.auth());
+  const { enqueueAlert } = useAlert();
 
   const login = (data: Record<string, any>) => {
     firebaseApp
       .auth()
       .signInWithEmailAndPassword(data.email, data.password)
-      .catch(reason => setError(reason));
+      .then(() =>
+        enqueueAlert('You are now logged in!', { variant: 'success' })
+      )
+      .catch(reason => enqueueAlert(reason.message, { variant: 'error' }));
   };
 
   const signup = (data: Record<string, any>) => {
     if (data.password !== data.confirm) {
-      setError({ message: 'Passwords do not much.' });
+      enqueueAlert('Passwords do not match', { variant: 'error' });
     } else {
       firebaseApp
         .auth()
         .createUserWithEmailAndPassword(data.email, data.password)
-        .catch(reason => setError(reason));
+        .then(() =>
+          enqueueAlert('Account created! You are now logged in.', {
+            variant: 'success',
+          })
+        )
+        .catch(reason => enqueueAlert(reason.message, { variant: 'error' }));
     }
   };
 
@@ -38,11 +44,11 @@ const AuthenticationForm: React.FC<{ registering?: boolean }> = props => {
     firebaseApp
       .auth()
       .signInWithRedirect(googleAuthProvider)
-      .catch(reason => setError(reason));
+      .catch(reason => enqueueAlert(reason.message, { variant: 'error' }));
   };
 
   if (user) {
-    return <Redirect to="/" />;
+    return <Redirect to="/" push />;
   }
 
   return (
@@ -178,7 +184,7 @@ const AuthenticationForm: React.FC<{ registering?: boolean }> = props => {
           </div>
         )}
       </form>
-      {error && <div className="text-red-600 mt-5">{error.message}</div>}
+      {/* {error && <div className="text-red-600 mt-5">{error.message}</div>} */}
     </div>
   );
 };

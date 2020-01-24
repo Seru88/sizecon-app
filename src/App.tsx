@@ -17,12 +17,13 @@ import {
   faStar,
   faUserPlus,
 } from '@fortawesome/free-solid-svg-icons';
+import {faBookmark as farBookmark} from '@fortawesome/free-regular-svg-icons'
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
+import AlertProvider from './containers/AlertProvider';
 import routes from './routes';
 import firebaseApp from './util/firebaseApp';
-import AlertProvider from './containers/AlertProvider';
 
 iconLibray.add(
   faCalendar,
@@ -34,6 +35,7 @@ iconLibray.add(
   faSignOutAlt,
   faUserPlus,
   faBookmark,
+  farBookmark,
   faEnvelope,
   faPlus,
   faDiscord,
@@ -50,18 +52,16 @@ export const AppContext = React.createContext<{
 const App: React.FC = () => {
   const [user, initialising] = useAuthState(firebaseApp.auth());
   return (
-    <AppContext.Provider value={{ user: user }}>
-      <div className="m-auto antialiased font-main text-center">
-        {initialising ? (
-          <div>Loading...</div>
-        ) : (
-          <AlertProvider>
-            {/* <Header /> */}
-            <main className="p-6 max-w-sm mx-auto">{routes}</main>
-          </AlertProvider>
-        )}
-      </div>
-    </AppContext.Provider>
+    <div className="m-auto antialiased font-main text-center">
+      {initialising ? (
+        <div>Loading...</div>
+      ) : (
+        <AlertProvider>
+          {/* <Header /> */}
+          <main className="p-6 max-w-sm mx-auto">{routes}</main>
+        </AlertProvider>
+      )}
+    </div>
   );
 };
 

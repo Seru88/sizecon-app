@@ -1,7 +1,6 @@
 import React from 'react';
 import Home from './Home';
 import Schedule from './Schedule';
-import SpecialGuests from './SpecialGuests';
 import Login from './Login';
 import {
   BrowserRouter,
@@ -16,6 +15,7 @@ import {
 import Logout from './Logout';
 import Signup from './Signup';
 import Event from './Event';
+import GuestList from './GuestList';
 
 // const ProtectedRoute: React.FC<RouteProps> = props => {
 //   const { path, exact, component } = props;
@@ -42,7 +42,7 @@ const routes = (
         <Schedule />
       </Route>
       <Route exact path="/special-guests">
-        <SpecialGuests />
+        <GuestList/>
       </Route>
       <Route exact path="/event/:slug">
         <Event/>

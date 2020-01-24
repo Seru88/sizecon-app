@@ -1,13 +1,11 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 
 import eventSchedule from '../assets/schedule.json';
-import Button from '../components/Button';
+import BookmarkButton from '../containers/BookmarkButton';
 import firebaseApp from '../util/firebaseApp';
 import getFormattedEventTime from '../util/getFormattedEventTime';
-import useAlert from '../hooks/useAlert';
 
 const Event: React.FC = () => {
   const { slug } = useParams();
@@ -17,14 +15,6 @@ const Event: React.FC = () => {
   const event = events.find(event => event.slug === slug);
 
   const [user] = useAuthState(firebaseApp.auth());
-  const { enqueueAlert } = useAlert();
-
-  const handleBookmark = () => {
-    if (user) {
-    } else {
-      enqueueAlert('You must be logged in to bookmark', { variant: 'error' });
-    }
-  };
 
   if (event === undefined) return null;
 
@@ -35,7 +25,6 @@ const Event: React.FC = () => {
         {getFormattedEventTime(event.begin, event.end)}
       </div>
       <div className="my-1">Room ???</div>
-      {/* <p className="text-xl my-4">{event.description}</p> */}
       {event.description &&
         event.description.split('\n').map((section, i) => (
           <p key={i} className="text-xl my-4">
@@ -43,14 +32,7 @@ const Event: React.FC = () => {
           </p>
         ))}
       <div className="text-xs my-3">Notes ...</div>
-      <div className="mt-10 mb-4">
-        <Button fullwidth onClick={handleBookmark}>
-          <div className="w-8 inline-block">
-            <FontAwesomeIcon icon="plus" />
-          </div>
-          {` `}Add to bookmark
-        </Button>
-      </div>
+      {user && slug && <BookmarkButton user={user} slug={slug} />}
     </div>
   );
 };
