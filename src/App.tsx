@@ -1,9 +1,6 @@
 import { library as iconLibray } from '@fortawesome/fontawesome-svg-core';
-import {
-  faDiscord,
-  faGoogle,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faBookmark as farBookmark } from '@fortawesome/free-regular-svg-icons';
 import {
   faBookmark,
   faCalendar,
@@ -17,10 +14,10 @@ import {
   faStar,
   faUserPlus,
 } from '@fortawesome/free-solid-svg-icons';
-import {faBookmark as farBookmark} from '@fortawesome/free-regular-svg-icons'
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
+import Header from './components/Header';
 import AlertProvider from './containers/AlertProvider';
 import routes from './routes';
 import firebaseApp from './util/firebaseApp';
@@ -57,7 +54,7 @@ const App: React.FC = () => {
         <div>Loading...</div>
       ) : (
         <AlertProvider>
-          {/* <Header /> */}
+          <Header />
           <main className="p-6 max-w-sm mx-auto">{routes}</main>
         </AlertProvider>
       )}
