@@ -34,22 +34,29 @@ const GuestList: React.FC = () => {
           return (
             <li key={i}>
               <Card className="my-3">
-                <button className="w-full" onClick={handleClick(guest.slug)}>
-                  <img className="rounded w-full" src={guest.img} alt={guest.slug} />
-                  <div className="py-2 px-4 w-full relative">
+                <button className="w-full focus:outline-none" onClick={handleClick(guest.slug)}>
+                  <img
+                    className="rounded w-full"
+                    src={guest.img}
+                    alt={guest.slug}
+                  />
+                </button>
+                <div className="w-full relative">
+                  <button className="py-2 px-4 w-full focus:outline-none" onClick={handleClick(guest.slug)}>
                     <div className="text-xl text-left mr-12">{guest.name}</div>
                     <div className="text-left mr-12">{guest.description}</div>
-                    <button
-                      className="absolute inset-y-0 right-0 mr-4 focus:outline-none"
-                      onClick={() => handleBookmark(guest.slug)}
-                    >
-                      <FontAwesomeIcon
-                        className="text-green-400 text-2xl"
-                        icon={icon as IconProp}
-                      />
-                    </button>
-                  </div>
+                  </button>
+                  <button
+                  className="absolute bottom-0 inset-y-0 right-0 mr-4 focus:outline-none z-10"
+                  onClick={() => handleBookmark(guest.slug)}
+                >
+                  <FontAwesomeIcon
+                    className="text-green-400 text-2xl"
+                    icon={icon as IconProp}
+                  />
                 </button>
+                </div>
+                
               </Card>
               {/* </button> */}
             </li>
