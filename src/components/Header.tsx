@@ -29,7 +29,10 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="w-full h-13 bg-green-400 shadow flex flex-col shadow-lg justify-center fixed transition-top z-50" style={{top: top}}>
+    <header
+      className="w-full h-13 bg-green-400 shadow flex flex-col shadow-lg justify-center fixed transition-top z-50"
+      style={{ top: top }}
+    >
       <div className="cursor-pointer" onClick={handleClick}>
         <span className="text-white text-6xl font-bold">SIZECON</span>
         {` `}
