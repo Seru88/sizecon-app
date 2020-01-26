@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Alert from '../components/Alert';
-import { AlertProps, AlertVariant } from '../components/Alert';
+import Alert, { AlertProps, AlertVariant } from '../components/Alert';
 
 interface AlertContextProps {
   enqueueAlert: (
@@ -46,7 +45,7 @@ const AlertProvider: React.FC<AlertProviderProps> = props => {
         clearTimeout(timeoutHandle);
       }
     };
-  }, [visible, setVisible]);
+  }, [visible, setVisible, duration]);
 
   return (
     <AlertContext.Provider value={{ enqueueAlert: enqueueAlert }}>

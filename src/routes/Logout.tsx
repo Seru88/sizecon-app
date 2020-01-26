@@ -16,7 +16,7 @@ const Logout: React.FC = () => {
       .then(() =>
         enqueueAlert('You have been logged out!', { variant: 'success' })
       );
-  }, []);
+  }, [enqueueAlert]);
 
   if (user === null) return <Redirect to="/" push />;
 

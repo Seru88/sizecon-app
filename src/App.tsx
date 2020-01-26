@@ -17,7 +17,6 @@ import {
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
-import Header from './components/Header';
 import AlertProvider from './containers/AlertProvider';
 import routes from './routes';
 import firebaseApp from './util/firebaseApp';
@@ -47,15 +46,16 @@ export const AppContext = React.createContext<{
 });
 
 const App: React.FC = () => {
-  const [user, initialising] = useAuthState(firebaseApp.auth());
+  const [, initialising] = useAuthState(firebaseApp.auth());
   return (
     <div className="m-auto antialiased font-main text-center">
       {initialising ? (
         <div>Loading...</div>
       ) : (
         <AlertProvider>
-          <Header />
-          <main className="p-6 max-w-sm mx-auto">{routes}</main>
+          {/* <Header /> */}
+          {/* <main className="p-6 max-w-sm mx-auto">{routes}</main> */}
+          {routes}
         </AlertProvider>
       )}
     </div>

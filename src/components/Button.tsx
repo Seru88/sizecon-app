@@ -13,7 +13,7 @@ const Button = classed.button<{ fullwidth?: boolean }>`
   border-gray-400
   rounded
   shadow
-  text-xl
+  text-3xl
   text-left
 `;
 

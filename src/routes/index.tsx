@@ -16,6 +16,7 @@ import Logout from './Logout';
 import Signup from './Signup';
 import Event from './Event';
 import GuestList from './GuestList';
+import Header from '../components/Header';
 
 // const ProtectedRoute: React.FC<RouteProps> = props => {
 //   const { path, exact, component } = props;
@@ -34,30 +35,32 @@ import GuestList from './GuestList';
 
 const routes = (
   <BrowserRouter basename="/">
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/schedule">
-        <Schedule />
-      </Route>
-      <Route exact path="/special-guests">
-        <GuestList/>
-      </Route>
-      <Route exact path="/event/:slug">
-        <Event/>
-      </Route>
-      <Route exact path="/login">
-        <Login />
-      </Route>
-      <Route exact path="/logout">
-        <Logout />
-      </Route>
-      <Route exact path="/signup">
-        <Signup />
-      </Route>
-      {/* <ProtectedRoute exact path="/bookmarks" component={Bookmarks} /> */}
-    </Switch>
+    <Header />
+    <main className="p-6 max-w-sm mx-auto">
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/schedule">
+          <Schedule />
+        </Route>
+        <Route exact path="/special-guests">
+          <GuestList />
+        </Route>
+        <Route exact path="/event/:slug">
+          <Event />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/logout">
+          <Logout />
+        </Route>
+        <Route exact path="/signup">
+          <Signup />
+        </Route>
+      </Switch>
+    </main>
   </BrowserRouter>
 );
 

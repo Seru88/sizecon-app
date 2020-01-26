@@ -1,11 +1,10 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-
-import { useHistory } from 'react-router-dom';
-import NavigationButton from '../components/Button';
-import Button from '../components/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useHistory } from 'react-router-dom';
+
+import Button from '../components/Button';
 import firebaseApp from '../util/firebaseApp';
 
 interface NavObj {

@@ -1,6 +1,6 @@
-import React from 'react';
 import * as firebase from 'firebase/app';
 import { useDocumentData } from 'react-firebase-hooks/firestore';
+
 import firebaseApp from '../util/firebaseApp';
 import useAlert from './useAlert';
 

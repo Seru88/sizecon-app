@@ -1,11 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as firebase from 'firebase/app';
 import React from 'react';
-import { useDocumentData } from 'react-firebase-hooks/firestore';
 
 import Button from '../components/Button';
-import useAlert from '../hooks/useAlert';
-import firebaseApp from '../util/firebaseApp';
 import useBookmarks from '../hooks/useBookmarks';
 
 const BookmarkButton: React.FC<{

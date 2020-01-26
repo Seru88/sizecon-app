@@ -1,19 +1,19 @@
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useHistory } from 'react-router-dom';
 
 import eventSchedule from '../assets/schedule.json';
 import Card from '../components/Card';
-import getFormattedEventTime from '../util/getFormattedEventTime';
 import useBookmarks from '../hooks/useBookmarks';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import firebaseApp from '../util/firebaseApp';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import getFormattedEventTime from '../util/getFormattedEventTime';
 
 const Schedule: React.FC = () => {
   const { day_one: saturday, day_two: sunday } = eventSchedule.schedule_2020;
   const [user] = useAuthState(firebaseApp.auth());
-  const [bookmarks, loading, error, handleBookmark] = useBookmarks(user);
+  const [bookmarks, , , handleBookmark] = useBookmarks(user);
   const history = useHistory();
 
   const handleClick = (slug: string) => () => {
@@ -29,7 +29,7 @@ const Schedule: React.FC = () => {
           const icon = isBookmarked ? 'bookmark' : ['far', 'bookmark'];
           return (
             <li key={i}>
-              <Card className="my-3 relative">
+              <Card className="my-4 relative">
                 <button
                   className="py-2 px-4 w-full"
                   onClick={handleClick(event.slug)}
@@ -44,7 +44,7 @@ const Schedule: React.FC = () => {
                   onClick={() => handleBookmark(event.slug)}
                 >
                   <FontAwesomeIcon
-                    className="text-green-400 text-2xl"
+                    className="text-green-400 text-3xl"
                     icon={icon as IconProp}
                   />
                 </button>
