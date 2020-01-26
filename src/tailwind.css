@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.transition-top {
+  transition: top 0.3s;
+}

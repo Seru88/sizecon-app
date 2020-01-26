@@ -10667,6 +10667,11 @@ video {
   z-index: auto;
 }
 
+.transition-top {
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

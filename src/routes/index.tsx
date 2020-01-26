@@ -17,6 +17,7 @@ import Signup from './Signup';
 import Event from './Event';
 import GuestList from './GuestList';
 import Header from '../components/Header';
+import FloorMap from './FloorMap';
 
 // const ProtectedRoute: React.FC<RouteProps> = props => {
 //   const { path, exact, component } = props;
@@ -36,7 +37,7 @@ import Header from '../components/Header';
 const routes = (
   <BrowserRouter basename="/">
     <Header />
-    <main className="p-6 max-w-sm mx-auto">
+    <main className="p-6 mt-24 max-w-sm mx-auto">
       <Switch>
         <Route exact path="/">
           <Home />
@@ -46,6 +47,9 @@ const routes = (
         </Route>
         <Route exact path="/special-guests">
           <GuestList />
+        </Route>
+        <Route exact path="/floor-map">
+          <FloorMap/>
         </Route>
         <Route exact path="/event/:slug">
           <Event />

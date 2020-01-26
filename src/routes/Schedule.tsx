@@ -9,9 +9,21 @@ import Card from '../components/Card';
 import useBookmarks from '../hooks/useBookmarks';
 import firebaseApp from '../util/firebaseApp';
 import getFormattedEventTime from '../util/getFormattedEventTime';
+import classed from 'classed-components';
+
+const DayButton = classed.button<{current?: boolean}>`
+  w-1/2
+  border
+  rounded-lg
+  border-green-300
+  h-8
+  focus:outline-none
+  ${({current}) => current ? 'bg-green-300 text-white' : 'bg-white text-black'}
+`;
 
 const Schedule: React.FC = () => {
   const { day_one: saturday, day_two: sunday } = eventSchedule.schedule_2020;
+  const [showing, setShowing] = React.useState<'sat' | 'sun'>('sat');
   const [user] = useAuthState(firebaseApp.auth());
   const [bookmarks, , , handleBookmark] = useBookmarks(user);
   const history = useHistory();
@@ -20,11 +32,21 @@ const Schedule: React.FC = () => {
     history.push(`/event/${slug}`);
   };
 
+  const handleDayToggle = (day: 'sat'|'sun') => () => {
+    setShowing(day);
+  }
+
+  const eventsToDisplay = showing === 'sat' ? saturday.events : sunday.events;
+
   return (
     <div>
       <h1 className="text-2xl">Event Schedule</h1>
+      <div className="max-w-xs mx-auto my-2">
+        <DayButton current={showing === 'sat'} onClick={handleDayToggle('sat')}>Saturday</DayButton>
+        <DayButton current={showing === 'sun'} onClick={handleDayToggle('sun')}>Sunday</DayButton>
+      </div>
       <ul>
-        {saturday.events.map((event, i) => {
+        {eventsToDisplay.map((event, i) => {
           const isBookmarked = bookmarks?.includes(event.slug);
           const icon = isBookmarked ? 'bookmark' : ['far', 'bookmark'];
           return (
