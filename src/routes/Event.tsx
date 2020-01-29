@@ -20,7 +20,7 @@ const Event: React.FC = () => {
 
   return (
     <div className="text-left">
-      <h1 className="text-3xl">{event.name}</h1>
+      {/* <h1 className="text-3xl">{event.name}</h1> */}
       <div className="my-1">
         {getFormattedEventTime(event.begin, event.end)}
       </div>

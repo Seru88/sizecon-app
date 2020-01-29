@@ -22,7 +22,7 @@ const GuestList: React.FC = () => {
 
   return (
     <div>
-      <h1 className="text-2xl">Special Guests</h1>
+      {/* <h1 className="text-2xl">Special Guests</h1> */}
       <ul>
         {guests.map((guest, i) => {
           const isBookmarked = bookmarks?.includes(guest.slug);
@@ -55,7 +55,7 @@ const GuestList: React.FC = () => {
                     onClick={() => handleBookmark(guest.slug)}
                   >
                     <FontAwesomeIcon
-                      className="text-green-400 text-3xl"
+                      className="text-green-400 text-4xl"
                       icon={icon as IconProp}
                     />
                   </button>

@@ -15,7 +15,7 @@ interface NavObj {
 
 const navItems: NavObj[] = [
   { path: '/schedule', icon: 'calendar', label: 'Event Schedule' },
-  { path: '/special-guests', icon: 'star', label: 'Special Guest' },
+  { path: '/guests', icon: 'star', label: 'Guest' },
   { path: '/floor-map', icon: 'map', label: 'Floor Map' },
   { path: '/rules', icon: 'gavel', label: 'Rules' },
   { path: '/discord', icon: ['fab', 'discord'], label: 'Discord' },

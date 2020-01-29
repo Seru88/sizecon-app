@@ -37,7 +37,7 @@ import FloorMap from './FloorMap';
 const routes = (
   <BrowserRouter basename="/">
     <Header />
-    <main className="p-6 mt-24 max-w-sm mx-auto">
+    <main className="py-6 px-3 mt-16 max-w-sm mx-auto">
       <Switch>
         <Route exact path="/">
           <Home />
@@ -45,7 +45,7 @@ const routes = (
         <Route exact path="/schedule">
           <Schedule />
         </Route>
-        <Route exact path="/special-guests">
+        <Route exact path="/guests">
           <GuestList />
         </Route>
         <Route exact path="/floor-map">

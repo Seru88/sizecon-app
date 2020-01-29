@@ -13,6 +13,7 @@ import {
   faSignOutAlt,
   faStar,
   faUserPlus,
+  faArrowLeft
 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -30,6 +31,7 @@ iconLibray.add(
   faSignInAlt,
   faSignOutAlt,
   faUserPlus,
+  faArrowLeft,
   faBookmark,
   farBookmark,
   faEnvelope,

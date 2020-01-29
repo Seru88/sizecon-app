@@ -12,12 +12,13 @@ import getFormattedEventTime from '../util/getFormattedEventTime';
 import classed from 'classed-components';
 
 const DayButton = classed.button<{current?: boolean}>`
-  w-1/2
+  w-1/3
   border
   rounded-lg
   border-green-300
   h-8
   focus:outline-none
+  mx-2
   ${({current}) => current ? 'bg-green-300 text-white' : 'bg-white text-black'}
 `;
 
@@ -40,7 +41,7 @@ const Schedule: React.FC = () => {
 
   return (
     <div>
-      <h1 className="text-2xl">Event Schedule</h1>
+      {/* <h1 className="text-2xl">Event Schedule</h1> */}
       <div className="max-w-xs mx-auto my-2">
         <DayButton current={showing === 'sat'} onClick={handleDayToggle('sat')}>Saturday</DayButton>
         <DayButton current={showing === 'sun'} onClick={handleDayToggle('sun')}>Sunday</DayButton>
@@ -66,7 +67,7 @@ const Schedule: React.FC = () => {
                   onClick={() => handleBookmark(event.slug)}
                 >
                   <FontAwesomeIcon
-                    className="text-green-400 text-3xl"
+                    className="text-green-400 text-4xl"
                     icon={icon as IconProp}
                   />
                 </button>
