@@ -1,5 +1,5 @@
-import React from 'react';
 import classed from 'classed-components';
+import React from 'react';
 
 export type AlertVariant = 'success' | 'error' | 'warning' | 'default';
 

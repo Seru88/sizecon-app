@@ -1,6 +1,6 @@
-import React from 'react';
-import { useHistory, useRouteMatch, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
 
 let prevScrollPos = window.pageYOffset;
 
@@ -23,10 +23,8 @@ const Header: React.FC = () => {
   const history = useHistory();
   const rootMatch = useRouteMatch('/');
   const eventMatch = useRouteMatch('/event/:slug');
+  const passResetMatch = useRouteMatch('/reset-password');
   const location = useLocation();
-
-  console.log(location);
-  console.log(rootMatch);
 
   const handleClick = () => {
     history.push('/');
@@ -45,6 +43,8 @@ const Header: React.FC = () => {
   const handleGoBack = () => {
     if (eventMatch?.isExact) {
       history.push('/schedule');
+    } else if (passResetMatch?.isExact) {
+      history.push('/login');
     } else {
       history.push('/');
     }

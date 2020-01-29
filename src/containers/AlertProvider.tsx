@@ -21,7 +21,7 @@ const AlertProvider: React.FC<AlertProviderProps> = props => {
   const [visible, setVisible] = React.useState(false);
   const [message, setMessage] = React.useState<React.ReactNode>(null);
   const [duration, setDuration] = React.useState(defaultDuration ?? 3000);
-  const [variant, setVariant] = React.useState<AlertVariant>('default')
+  const [variant, setVariant] = React.useState<AlertVariant>('default');
 
   const enqueueAlert = (
     message: React.ReactNode,

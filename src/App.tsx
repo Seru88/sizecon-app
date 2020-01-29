@@ -2,6 +2,7 @@ import { library as iconLibray } from '@fortawesome/fontawesome-svg-core';
 import { faDiscord, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faBookmark as farBookmark } from '@fortawesome/free-regular-svg-icons';
 import {
+  faArrowLeft,
   faBookmark,
   faCalendar,
   faEnvelope,
@@ -13,7 +14,6 @@ import {
   faSignOutAlt,
   faStar,
   faUserPlus,
-  faArrowLeft
 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';

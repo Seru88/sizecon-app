@@ -55,7 +55,11 @@ const Home: React.FC = () => {
                 <hr className="border-green-800 w-11/12 mx-auto my-6" />
               )}
               <div className={index === 0 ? 'mb-3' : 'my-3'}>
-                <Button onClick={handleClick(item.path)} fullwidth>
+                <Button
+                  className="text-3xl text-left"
+                  onClick={handleClick(item.path)}
+                  fullwidth
+                >
                   <div className="w-8 inline-block">
                     <FontAwesomeIcon icon={item.icon} />
                   </div>

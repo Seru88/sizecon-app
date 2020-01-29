@@ -13,8 +13,6 @@ const Button = classed.button<{ fullwidth?: boolean }>`
   border-gray-400
   rounded
   shadow
-  text-3xl
-  text-left
 `;
 
 export default Button;

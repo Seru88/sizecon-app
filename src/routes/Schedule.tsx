@@ -1,5 +1,6 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classed from 'classed-components';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useHistory } from 'react-router-dom';
@@ -9,9 +10,8 @@ import Card from '../components/Card';
 import useBookmarks from '../hooks/useBookmarks';
 import firebaseApp from '../util/firebaseApp';
 import getFormattedEventTime from '../util/getFormattedEventTime';
-import classed from 'classed-components';
 
-const DayButton = classed.button<{current?: boolean}>`
+const DayButton = classed.button<{ current?: boolean }>`
   w-1/3
   border
   rounded-lg
@@ -19,7 +19,8 @@ const DayButton = classed.button<{current?: boolean}>`
   h-8
   focus:outline-none
   mx-2
-  ${({current}) => current ? 'bg-green-300 text-white' : 'bg-white text-black'}
+  ${({ current }) =>
+    current ? 'bg-green-300 text-white' : 'bg-white text-black'}
 `;
 
 const Schedule: React.FC = () => {
@@ -33,9 +34,9 @@ const Schedule: React.FC = () => {
     history.push(`/event/${slug}`);
   };
 
-  const handleDayToggle = (day: 'sat'|'sun') => () => {
+  const handleDayToggle = (day: 'sat' | 'sun') => () => {
     setShowing(day);
-  }
+  };
 
   const eventsToDisplay = showing === 'sat' ? saturday.events : sunday.events;
 
@@ -43,8 +44,12 @@ const Schedule: React.FC = () => {
     <div>
       {/* <h1 className="text-2xl">Event Schedule</h1> */}
       <div className="max-w-xs mx-auto my-2">
-        <DayButton current={showing === 'sat'} onClick={handleDayToggle('sat')}>Saturday</DayButton>
-        <DayButton current={showing === 'sun'} onClick={handleDayToggle('sun')}>Sunday</DayButton>
+        <DayButton current={showing === 'sat'} onClick={handleDayToggle('sat')}>
+          Saturday
+        </DayButton>
+        <DayButton current={showing === 'sun'} onClick={handleDayToggle('sun')}>
+          Sunday
+        </DayButton>
       </div>
       <ul>
         {eventsToDisplay.map((event, i) => {

@@ -1,24 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Header from '../components/Header';
+import Event from './Event';
+import FloorMap from './FloorMap';
+import GuestList from './GuestList';
 import Home from './Home';
-import Schedule from './Schedule';
 import Login from './Login';
-import {
-  BrowserRouter,
-  // Redirect,
-  Route,
-  // RouteProps,
-  Switch,
-} from 'react-router-dom';
+import Logout from './Logout';
+import ResetPassword from './ResetPassword';
+import Schedule from './Schedule';
+import Signup from './Signup';
+
 // import { useAuthState } from 'react-firebase-hooks/auth';
 // import { firebaseApp } from '../App';
 // import Bookmarks from './Bookmarks';
-import Logout from './Logout';
-import Signup from './Signup';
-import Event from './Event';
-import GuestList from './GuestList';
-import Header from '../components/Header';
-import FloorMap from './FloorMap';
-
 // const ProtectedRoute: React.FC<RouteProps> = props => {
 //   const { path, exact, component } = props;
 //   const [user] = useAuthState(firebaseApp.auth());
@@ -49,7 +45,7 @@ const routes = (
           <GuestList />
         </Route>
         <Route exact path="/floor-map">
-          <FloorMap/>
+          <FloorMap />
         </Route>
         <Route exact path="/event/:slug">
           <Event />
@@ -62,6 +58,9 @@ const routes = (
         </Route>
         <Route exact path="/signup">
           <Signup />
+        </Route>
+        <Route exact path="/reset-password">
+          <ResetPassword />
         </Route>
       </Switch>
     </main>

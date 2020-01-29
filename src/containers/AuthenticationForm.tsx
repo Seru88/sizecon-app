@@ -1,15 +1,18 @@
-import React from 'react';
-import { Redirect, Link } from 'react-router-dom';
-import NavigationButton from '../components/Button';
-import { useForm, FieldError } from 'react-hook-form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import firebaseApp from '../util/firebaseApp';
-import { googleAuthProvider } from '../util/firebaseApp';
-import useAlert from '../hooks/useAlert';
+import { FieldError, useForm } from 'react-hook-form';
+import { Link, useHistory } from 'react-router-dom';
 
-const AuthenticationForm: React.FC<{ registering?: boolean }> = props => {
+import Button from '../components/Button';
+import useAlert from '../hooks/useAlert';
+import firebaseApp, { googleAuthProvider } from '../util/firebaseApp';
+
+const AuthenticationForm: React.FC<{
+  registering?: boolean;
+}> = props => {
   const { registering } = props;
+  const history = useHistory();
   const { register, handleSubmit, errors: validationErrors } = useForm();
   const [user] = useAuthState(firebaseApp.auth());
   const { enqueueAlert } = useAlert();
@@ -48,7 +51,7 @@ const AuthenticationForm: React.FC<{ registering?: boolean }> = props => {
   };
 
   if (user) {
-    return <Redirect to="/" push />;
+    history.push('/');
   }
 
   return (
@@ -69,7 +72,7 @@ const AuthenticationForm: React.FC<{ registering?: boolean }> = props => {
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="text"
-            placeholder="Username"
+            placeholder="Email"
             ref={register({ required: 'Eamil required' })}
           />
           {validationErrors.email && (
@@ -135,20 +138,24 @@ const AuthenticationForm: React.FC<{ registering?: boolean }> = props => {
           </div>
         )}
         <div className="flex items-center justify-between mt-8 mb-4">
-          <NavigationButton type="submit" fullwidth={registering}>
+          <Button
+            className="text-2xl text-left"
+            type="submit"
+            fullwidth={registering}
+          >
             <div className="w-8 inline-block">
               <FontAwesomeIcon icon="envelope" />
             </div>
             {` `}
             {!registering ? 'Log in' : 'Sign up with email'}
-          </NavigationButton>
+          </Button>
           {!registering && (
-            <a
-              className="inline-block align-baseline font-bold tex-lg text-green-500 hover:text-blue-800"
-              href="https://example.com"
+            <Link
+              className="inline-block align-baseline font-bold text-lg text-green-500 hover:text-blue-800"
+              to="/reset-password"
             >
               Forgot Password?
-            </a>
+            </Link>
           )}
         </div>
         <div className="mx-auto text-lg font-bold">or</div>

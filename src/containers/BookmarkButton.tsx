@@ -14,14 +14,14 @@ const BookmarkButton: React.FC<{
 
   const onClick = () => {
     handleBookmark(slug);
-  }
+  };
 
   if (error) console.error(error);
 
   return (
     <div className="mt-10 mb-4">
       {!loading && (
-        <Button fullwidth onClick={onClick}>
+        <Button className="text-3xl text-left" fullwidth onClick={onClick}>
           <div className="w-8 inline-block">
             <FontAwesomeIcon icon="plus" />
           </div>
