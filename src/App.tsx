@@ -14,6 +14,7 @@ import {
   faSignOutAlt,
   faStar,
   faUserPlus,
+  faHeart,
 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -31,6 +32,7 @@ iconLibray.add(
   faSignInAlt,
   faSignOutAlt,
   faUserPlus,
+  faHeart,
   faArrowLeft,
   faBookmark,
   farBookmark,
@@ -50,13 +52,13 @@ export const AppContext = React.createContext<{
 const App: React.FC = () => {
   const [, initialising] = useAuthState(firebaseApp.auth());
   return (
-    <div className="m-auto antialiased font-main text-center">
+    <div className="m-auto antialiased text-center font-main">
       {initialising ? (
         <div>Loading...</div>
       ) : (
         <AlertProvider>
           {/* <Header /> */}
-          {/* <main className="p-6 max-w-sm mx-auto">{routes}</main> */}
+          {/* <main className="max-w-sm p-6 mx-auto">{routes}</main> */}
           {routes}
         </AlertProvider>
       )}

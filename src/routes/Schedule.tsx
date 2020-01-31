@@ -1,16 +1,16 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import classed from 'classed-components';
-import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useHistory } from 'react-router-dom';
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classed from "classed-components";
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useHistory } from "react-router-dom";
 
-import eventSchedule from '../assets/schedule.json';
-import Card from '../components/Card';
-import Checkbox from '../components/Checkbox';
-import useBookmarks from '../hooks/useBookmarks';
-import firebaseApp from '../util/firebaseApp';
-import getFormattedEventTime from '../util/getFormattedEventTime';
+import eventSchedule from "../assets/schedule.json";
+import Card from "../components/Card";
+import Toggle from "../components/Toggle";
+import useBookmarks from "../hooks/useBookmarks";
+import firebaseApp from "../util/firebaseApp";
+import getFormattedEventTime from "../util/getFormattedEventTime";
 
 const DayButton = classed.button<{ current?: boolean }>`
   w-1/3
@@ -20,8 +20,9 @@ const DayButton = classed.button<{ current?: boolean }>`
   h-8
   focus:outline-none
   mx-2
+  font-bold
   ${({ current }) =>
-    current ? "bg-green-300 text-white" : "bg-white text-black"}
+    current ? "bg-green-500 text-white" : "bg-white text-black"}
 `;
 
 const Schedule: React.FC = () => {
@@ -55,24 +56,29 @@ const Schedule: React.FC = () => {
   return (
     <div>
       {/* <h1 className="text-2xl">Event Schedule</h1> */}
-      <div className="max-w-xs mx-auto my-2">
-        <DayButton current={day === "sat"} onClick={handleDayToggle("sat")}>
-          Saturday
-        </DayButton>
-        <DayButton current={day === "sun"} onClick={handleDayToggle("sun")}>
-          Sunday
-        </DayButton>
+      <div className="flex items-center justify-between w-full my-2">
+        <div className="flex-grow">
+          <DayButton current={day === "sat"} onClick={handleDayToggle("sat")}>
+            Saturday
+          </DayButton>
+          <DayButton current={day === "sun"} onClick={handleDayToggle("sun")}>
+            Sunday
+          </DayButton>
+        </div>
+
+        {bookmarks && (
+          <Toggle onChange={handleBookmarkToggle}>Show bookmarks</Toggle>
+        )}
       </div>
-      {bookmarks && <Checkbox onChange={handleBookmarkToggle}>Show bookmarks</Checkbox>}
+
       <ul>
         {eventsToDisplay.map((event, i) => {
           const isBookmarked = bookmarks?.includes(event.slug);
-          const icon = isBookmarked ? "bookmark" : ["far", "bookmark"];
           return (
             <li key={i}>
-              <Card className="relative my-4">
+              <Card className="flex items-center justify-between my-4">
                 <button
-                  className="w-full px-4 py-2"
+                  className="w-10/12 px-4 py-2"
                   onClick={handleClick(event.slug)}
                 >
                   <div className="mr-12 text-xl text-left">{event.name}</div>
@@ -80,15 +86,23 @@ const Schedule: React.FC = () => {
                     {getFormattedEventTime(event.begin, event.end)}
                   </div>
                 </button>
-                <button
-                  className="absolute inset-y-0 right-0 z-10 mr-4 focus:outline-none"
-                  onClick={() => handleBookmark(event.slug)}
-                >
-                  <FontAwesomeIcon
-                    className="text-4xl text-green-400"
-                    icon={icon as IconProp}
-                  />
-                </button>
+                <div className="w-2/12">
+                  <button
+                    className={`w-12 h-12 p-1 border-2 ${
+                      isBookmarked
+                        ? "bg-green-500 border-green-600"
+                        : "bg-white border-gray-400"
+                    } focus:outline-none block mx-auto shadow-md rounded-full`}
+                    onClick={() => handleBookmark(event.slug)}
+                  >
+                    <FontAwesomeIcon
+                      className={`text-2xl ${
+                        isBookmarked ? "text-white" : "text-green-400"
+                      } my-2`}
+                      icon="heart"
+                    />
+                  </button>
+                </div>
               </Card>
               {/* </button> */}
             </li>

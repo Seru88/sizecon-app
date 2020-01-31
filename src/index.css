@@ -10672,8 +10672,17 @@ video {
   transition: top 0.3s;
 }
 
-input:checked + svg {
-  display: block;
+.toggle__dot {
+  top: -.25rem;
+  left: -.25rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input:checked ~ .toggle__dot {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  background-color: #48bb78;
 }
 
 @media (min-width: 640px) {

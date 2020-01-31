@@ -7,7 +7,7 @@ import guestList from "../assets/guests.json";
 import Card from "../components/Card";
 import useBookmarks from "../hooks/useBookmarks";
 import firebaseApp from "../util/firebaseApp";
-import Checkbox from "../components/Checkbox";
+import Toggle from "../components/Toggle";
 
 const GuestList: React.FC = () => {
   // const { day_one: saturday, day_two: sunday } = eventSchedule.schedule_2020;
@@ -33,7 +33,7 @@ const GuestList: React.FC = () => {
     <div>
       {/* <h1 className="text-2xl">Special Guests</h1> */}
       {bookmarks && (
-        <Checkbox onChange={handleCheckbox}>Show bookmarks</Checkbox>
+        <Toggle onChange={handleCheckbox}>Show bookmarks</Toggle>
       )}
       <ul>
         {guests.map((guest, i) => {
@@ -52,9 +52,9 @@ const GuestList: React.FC = () => {
                     alt={guest.slug}
                   />
                 </button>
-                <div className="relative w-full">
+                <div className="flex items-center justify-between">
                   <button
-                    className="w-full px-4 py-2 focus:outline-none"
+                    className="w-10/12 px-4 py-2 focus:outline-none"
                     onClick={handleClick(guest.website.link)}
                   >
                     <div className="mr-12 text-2xl text-left">{guest.name}</div>
@@ -62,15 +62,24 @@ const GuestList: React.FC = () => {
                       {guest.description}
                     </div>
                   </button>
-                  <button
-                    className="absolute inset-y-0 bottom-0 right-0 z-10 mr-4 focus:outline-none"
-                    onClick={() => handleBookmark(guest.slug)}
-                  >
-                    <FontAwesomeIcon
-                      className="text-4xl text-green-400"
-                      icon={icon as IconProp}
-                    />
-                  </button>
+                  <div className="w-2/12">
+                    <button
+                      className={`w-12 h-12 p-1 border-2 ${
+                        isBookmarked
+                          ? "bg-green-500 border-green-600"
+                          : "bg-white border-gray-400"
+                      } focus:outline-none block mx-auto shadow-md`}
+                      onClick={() => handleBookmark(guest.slug)}
+                      style={{ borderRadius: 50 }}
+                    >
+                      <FontAwesomeIcon
+                        className={`text-2xl ${
+                          isBookmarked ? "text-white" : "text-green-400"
+                        } my-2`}
+                        icon="heart"
+                      />
+                    </button>
+                  </div>
                 </div>
               </Card>
               {/* </button> */}
