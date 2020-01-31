@@ -13,6 +13,7 @@ import Schedule from "./Schedule";
 import Signup from "./Signup";
 
 import { Transition, CSSTransition } from "react-transition-group";
+import { TransitionStatus } from "react-transition-group/Transition";
 
 // import { useAuthState } from 'react-firebase-hooks/auth';
 // import { firebaseApp } from '../App';
@@ -31,6 +32,28 @@ import { Transition, CSSTransition } from "react-transition-group";
 
 //   return <Route path={path} exact={exact} render={render} />;
 // };
+
+const defaultStyle: React.CSSProperties = {
+  position: "inherit"
+};
+
+const transitionStyles: Partial<Record<
+  TransitionStatus,
+  React.CSSProperties
+>> = {
+  entering: { opacity: 0, transform: "scale(1.1)" },
+  entered: {
+    opacity: 1,
+    transform: "scale(1)",
+    transition: "opacity 300ms, transform 300ms"
+  },
+  exiting: { opacity: 1, transform: "scale(1)" },
+  exited: {
+    opacity: 0,
+    transform: "scale(0.9)",
+    transition: "opacity 300ms, transform 300ms"
+  }
+};
 
 const paths = [
   { path: "/", component: Home },
@@ -51,16 +74,35 @@ const routes = (
       {paths.map(({ path, component: Component }) => (
         <Route key={path} exact path={path}>
           {({ match }) => (
-            <CSSTransition
+            <Transition
               in={match !== null}
-              timeout={400}
-              classNames="route"
+              timeout={300}
+              // classNames="route"
+              mountOnEnter
               unmountOnExit
             >
-              <div className="route">
-                <Component />
-              </div>
-            </CSSTransition>
+              {state => (
+                <div
+                  style={{
+                    ...defaultStyle,
+                    ...transitionStyles[state]
+                  }}
+                >
+                  <Component />
+                </div>
+              )}
+            </Transition>
+            // <CSSTransition
+            //   in={match !== null}
+            //   timeout={300}
+            //   classNames="route"
+            //   mountOnEnter
+            //   unmountOnExit
+            // >
+            //   <div className="route">
+            //     <Component />
+            //   </div>
+            // </CSSTransition>
           )}
         </Route>
       ))}

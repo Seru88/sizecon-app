@@ -7,6 +7,22 @@ import Card from "../components/Card";
 import Toggle from "../components/Toggle";
 import useBookmarks from "../hooks/useBookmarks";
 import firebaseApp from "../util/firebaseApp";
+import { Transition } from "react-transition-group";
+
+const transitionStyles = {
+  entering: { opacity: 1, transform: "scale(1.1)" },
+  entered: {
+    opacity: 1,
+    transform: "scale(1)",
+    transition: "opacity 400ms, transform 400ms"
+  },
+  exiting: { opacity: 1, transform: "scale(1)" },
+  exited: {
+    opacity: 0,
+    transform: "scale(0.9)",
+    transition: "opacity 400ms, transform 400ms"
+  }
+};
 
 const GuestList: React.FC = () => {
   // const { day_one: saturday, day_two: sunday } = eventSchedule.schedule_2020;
