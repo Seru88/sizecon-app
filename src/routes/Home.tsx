@@ -52,7 +52,7 @@ const Home: React.FC = () => {
           return (
             <React.Fragment key={item.label}>
               {index === array.length - offset && (
-                <hr className="border-green-800 w-11/12 mx-auto my-6" />
+                <hr className="w-11/12 mx-auto my-6 border-green-800" />
               )}
               <div className={index === 0 ? 'mb-3' : 'my-3'}>
                 <Button
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
                   onClick={handleClick(item.path)}
                   fullwidth
                 >
-                  <div className="w-8 inline-block">
+                  <div className="inline-block w-8">
                     <FontAwesomeIcon icon={item.icon} />
                   </div>
                   {` `}

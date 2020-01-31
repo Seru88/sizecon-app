@@ -29,6 +29,7 @@ const AlertContainer = classed.div<Pick<AlertProps, 'variant'>>`
   fixed
   bottom-0
   w-full
+  z-50
 `;
 
 const Alert: React.FC<AlertProps> = props => {

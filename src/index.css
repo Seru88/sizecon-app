@@ -10672,6 +10672,10 @@ video {
   transition: top 0.3s;
 }
 
+input:checked + svg {
+  display: block;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

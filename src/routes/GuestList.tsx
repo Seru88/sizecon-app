@@ -1,17 +1,18 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 
-import guestList from '../assets/guests.json';
-import Card from '../components/Card';
-import useBookmarks from '../hooks/useBookmarks';
-import firebaseApp from '../util/firebaseApp';
+import guestList from "../assets/guests.json";
+import Card from "../components/Card";
+import useBookmarks from "../hooks/useBookmarks";
+import firebaseApp from "../util/firebaseApp";
+import Checkbox from "../components/Checkbox";
 
 const GuestList: React.FC = () => {
   // const { day_one: saturday, day_two: sunday } = eventSchedule.schedule_2020;
-
-  const { guests_2020: guests } = guestList;
+  const [showBookmarks, setShowBookmarks] = React.useState(false);
+  let { guests_2020: guests } = guestList;
 
   const [user] = useAuthState(firebaseApp.auth());
   const [bookmarks, , , handleBookmark] = useBookmarks(user);
@@ -20,13 +21,24 @@ const GuestList: React.FC = () => {
     window.open(link);
   };
 
+  const handleCheckbox = () => {
+    setShowBookmarks(!showBookmarks);
+  };
+
+  if (showBookmarks) {
+    guests = guests.filter(guest => bookmarks?.includes(guest.slug));
+  }
+
   return (
     <div>
       {/* <h1 className="text-2xl">Special Guests</h1> */}
+      {bookmarks && (
+        <Checkbox onChange={handleCheckbox}>Show bookmarks</Checkbox>
+      )}
       <ul>
         {guests.map((guest, i) => {
           const isBookmarked = bookmarks?.includes(guest.slug);
-          const icon = isBookmarked ? 'bookmark' : ['far', 'bookmark'];
+          const icon = isBookmarked ? "bookmark" : ["far", "bookmark"];
           return (
             <li key={i}>
               <Card className="my-5">
@@ -35,27 +47,27 @@ const GuestList: React.FC = () => {
                   onClick={handleClick(guest.website.link)}
                 >
                   <img
-                    className="rounded w-full"
+                    className="w-full rounded"
                     src={guest.img}
                     alt={guest.slug}
                   />
                 </button>
-                <div className="w-full relative">
+                <div className="relative w-full">
                   <button
-                    className="py-2 px-4 w-full focus:outline-none"
+                    className="w-full px-4 py-2 focus:outline-none"
                     onClick={handleClick(guest.website.link)}
                   >
-                    <div className="text-2xl text-left mr-12">{guest.name}</div>
-                    <div className="text-sm text-left mr-12">
+                    <div className="mr-12 text-2xl text-left">{guest.name}</div>
+                    <div className="mr-12 text-sm text-left">
                       {guest.description}
                     </div>
                   </button>
                   <button
-                    className="absolute bottom-0 inset-y-0 right-0 mr-4 focus:outline-none z-10"
+                    className="absolute inset-y-0 bottom-0 right-0 z-10 mr-4 focus:outline-none"
                     onClick={() => handleBookmark(guest.slug)}
                   >
                     <FontAwesomeIcon
-                      className="text-green-400 text-4xl"
+                      className="text-4xl text-green-400"
                       icon={icon as IconProp}
                     />
                   </button>

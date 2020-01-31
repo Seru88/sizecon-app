@@ -5,3 +5,7 @@
 .transition-top {
   transition: top 0.3s;
 }
+
+input:checked + svg {
+  display: block;
+}
