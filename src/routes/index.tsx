@@ -45,13 +45,13 @@ const transitionStyles: Partial<Record<
   entered: {
     opacity: 1,
     transform: "scale(1)",
-    transition: "opacity 300ms, transform 300ms"
+    transition: "opacity 200ms, transform 200ms"
   },
-  exiting: { opacity: 1, transform: "scale(1)" },
+  exiting: { opacity: 1, transform: "scale(1)"},
   exited: {
     opacity: 0,
     transform: "scale(0.9)",
-    transition: "opacity 300ms, transform 300ms"
+    transition: "opacity 200ms, transform 200ms"
   }
 };
 
@@ -76,7 +76,7 @@ const routes = (
           {({ match }) => (
             <Transition
               in={match !== null}
-              timeout={300}
+              timeout={200}
               // classNames="route"
               mountOnEnter
               unmountOnExit

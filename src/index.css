@@ -10886,34 +10886,6 @@ input:checked ~ .toggle__dot {
   background-color: #48bb78;
 }
 
-.route {
-  position: 'inherit',
-}
-
-.route-enter {
-  opacity: 0;
-  /* transform: scale(1.1); */
-}
-
-.route-enter-active {
-  opacity: 1;
-  /* transform: scale(1); */
-  -webkit-transition: opacity 300ms;
-  transition: opacity 300ms
-}
-
-.route-exit {
-  opacity: 1;
-  /* transform: scale(1); */
-}
-
-.route-exit-active {
-  opacity: 0;
-  /* transform: scale(0.9); */
-  -webkit-transition: opacity 300ms;
-  transition: opacity 300ms
-}
-
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
