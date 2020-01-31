@@ -595,6 +595,10 @@ video {
   height: auto;
 }
 
+*, *::before, *::after {
+  --transition-duration: 250ms;
+}
+
 .container {
   width: 100%;
 }
@@ -10667,6 +10671,203 @@ video {
   z-index: auto;
 }
 
+.transition-none {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-all {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-color {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-bg {
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-border {
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-colors {
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-opacity {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-transform {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-0 {
+  --transition-duration: 0ms;
+  -webkit-transition-duration: 0ms;
+          transition-duration: 0ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-100 {
+  --transition-duration: 100ms;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-250 {
+  --transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-500 {
+  --transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-750 {
+  --transition-duration: 750ms;
+  -webkit-transition-duration: 750ms;
+          transition-duration: 750ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-1000 {
+  --transition-duration: 1000ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+.transition-linear {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.transition-ease {
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.transition-ease-in {
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.transition-ease-out {
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.transition-ease-in-out {
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.transition-delay-0 {
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+.transition-delay-100 {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+
+.transition-delay-250 {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+.transition-delay-500 {
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+.transition-delay-750 {
+  -webkit-transition-delay: 750ms;
+          transition-delay: 750ms;
+}
+
+.transition-delay-1000 {
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+
+.will-change-scroll {
+  will-change: scroll-position;
+}
+
+.will-change-contents {
+  will-change: contents;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
 .transition-top {
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
@@ -10683,6 +10884,44 @@ input:checked ~ .toggle__dot {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   background-color: #48bb78;
+}
+
+.route {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.route-enter {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.route-enter-active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.route-exit {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.route-exit-active {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
 }
 
 @media (min-width: 640px) {
@@ -20728,6 +20967,203 @@ input:checked ~ .toggle__dot {
 
   .sm\:z-auto {
     z-index: auto;
+  }
+
+  .sm\:transition-none {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-all {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-color {
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-bg {
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-border {
+    -webkit-transition-property: border-color;
+    transition-property: border-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-colors {
+    -webkit-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-opacity {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-transform {
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-0 {
+    --transition-duration: 0ms;
+    -webkit-transition-duration: 0ms;
+            transition-duration: 0ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-100 {
+    --transition-duration: 100ms;
+    -webkit-transition-duration: 100ms;
+            transition-duration: 100ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-250 {
+    --transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-500 {
+    --transition-duration: 500ms;
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-750 {
+    --transition-duration: 750ms;
+    -webkit-transition-duration: 750ms;
+            transition-duration: 750ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-1000 {
+    --transition-duration: 1000ms;
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .sm\:transition-linear {
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+  }
+
+  .sm\:transition-ease {
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+  }
+
+  .sm\:transition-ease-in {
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+
+  .sm\:transition-ease-out {
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+  }
+
+  .sm\:transition-ease-in-out {
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+
+  .sm\:transition-delay-0 {
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+  }
+
+  .sm\:transition-delay-100 {
+    -webkit-transition-delay: 100ms;
+            transition-delay: 100ms;
+  }
+
+  .sm\:transition-delay-250 {
+    -webkit-transition-delay: 250ms;
+            transition-delay: 250ms;
+  }
+
+  .sm\:transition-delay-500 {
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+  }
+
+  .sm\:transition-delay-750 {
+    -webkit-transition-delay: 750ms;
+            transition-delay: 750ms;
+  }
+
+  .sm\:transition-delay-1000 {
+    -webkit-transition-delay: 1000ms;
+            transition-delay: 1000ms;
+  }
+
+  .sm\:will-change-auto {
+    will-change: auto;
+  }
+
+  .sm\:will-change-scroll {
+    will-change: scroll-position;
+  }
+
+  .sm\:will-change-contents {
+    will-change: contents;
+  }
+
+  .sm\:will-change-opacity {
+    will-change: opacity;
+  }
+
+  .sm\:will-change-transform {
+    will-change: transform;
   }
 }
 
@@ -30775,6 +31211,203 @@ input:checked ~ .toggle__dot {
   .md\:z-auto {
     z-index: auto;
   }
+
+  .md\:transition-none {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-all {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-color {
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-bg {
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-border {
+    -webkit-transition-property: border-color;
+    transition-property: border-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-colors {
+    -webkit-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-opacity {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-transform {
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-0 {
+    --transition-duration: 0ms;
+    -webkit-transition-duration: 0ms;
+            transition-duration: 0ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-100 {
+    --transition-duration: 100ms;
+    -webkit-transition-duration: 100ms;
+            transition-duration: 100ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-250 {
+    --transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-500 {
+    --transition-duration: 500ms;
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-750 {
+    --transition-duration: 750ms;
+    -webkit-transition-duration: 750ms;
+            transition-duration: 750ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-1000 {
+    --transition-duration: 1000ms;
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .md\:transition-linear {
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+  }
+
+  .md\:transition-ease {
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+  }
+
+  .md\:transition-ease-in {
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+
+  .md\:transition-ease-out {
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+  }
+
+  .md\:transition-ease-in-out {
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+
+  .md\:transition-delay-0 {
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+  }
+
+  .md\:transition-delay-100 {
+    -webkit-transition-delay: 100ms;
+            transition-delay: 100ms;
+  }
+
+  .md\:transition-delay-250 {
+    -webkit-transition-delay: 250ms;
+            transition-delay: 250ms;
+  }
+
+  .md\:transition-delay-500 {
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+  }
+
+  .md\:transition-delay-750 {
+    -webkit-transition-delay: 750ms;
+            transition-delay: 750ms;
+  }
+
+  .md\:transition-delay-1000 {
+    -webkit-transition-delay: 1000ms;
+            transition-delay: 1000ms;
+  }
+
+  .md\:will-change-auto {
+    will-change: auto;
+  }
+
+  .md\:will-change-scroll {
+    will-change: scroll-position;
+  }
+
+  .md\:will-change-contents {
+    will-change: contents;
+  }
+
+  .md\:will-change-opacity {
+    will-change: opacity;
+  }
+
+  .md\:will-change-transform {
+    will-change: transform;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -40821,6 +41454,203 @@ input:checked ~ .toggle__dot {
   .lg\:z-auto {
     z-index: auto;
   }
+
+  .lg\:transition-none {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-all {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-color {
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-bg {
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-border {
+    -webkit-transition-property: border-color;
+    transition-property: border-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-colors {
+    -webkit-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-opacity {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-transform {
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-0 {
+    --transition-duration: 0ms;
+    -webkit-transition-duration: 0ms;
+            transition-duration: 0ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-100 {
+    --transition-duration: 100ms;
+    -webkit-transition-duration: 100ms;
+            transition-duration: 100ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-250 {
+    --transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-500 {
+    --transition-duration: 500ms;
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-750 {
+    --transition-duration: 750ms;
+    -webkit-transition-duration: 750ms;
+            transition-duration: 750ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-1000 {
+    --transition-duration: 1000ms;
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .lg\:transition-linear {
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+  }
+
+  .lg\:transition-ease {
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+  }
+
+  .lg\:transition-ease-in {
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+
+  .lg\:transition-ease-out {
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+  }
+
+  .lg\:transition-ease-in-out {
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+
+  .lg\:transition-delay-0 {
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+  }
+
+  .lg\:transition-delay-100 {
+    -webkit-transition-delay: 100ms;
+            transition-delay: 100ms;
+  }
+
+  .lg\:transition-delay-250 {
+    -webkit-transition-delay: 250ms;
+            transition-delay: 250ms;
+  }
+
+  .lg\:transition-delay-500 {
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+  }
+
+  .lg\:transition-delay-750 {
+    -webkit-transition-delay: 750ms;
+            transition-delay: 750ms;
+  }
+
+  .lg\:transition-delay-1000 {
+    -webkit-transition-delay: 1000ms;
+            transition-delay: 1000ms;
+  }
+
+  .lg\:will-change-auto {
+    will-change: auto;
+  }
+
+  .lg\:will-change-scroll {
+    will-change: scroll-position;
+  }
+
+  .lg\:will-change-contents {
+    will-change: contents;
+  }
+
+  .lg\:will-change-opacity {
+    will-change: opacity;
+  }
+
+  .lg\:will-change-transform {
+    will-change: transform;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -50866,5 +51696,202 @@ input:checked ~ .toggle__dot {
 
   .xl\:z-auto {
     z-index: auto;
+  }
+
+  .xl\:transition-none {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-all {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-color {
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-bg {
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-border {
+    -webkit-transition-property: border-color;
+    transition-property: border-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-colors {
+    -webkit-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-opacity {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-transform {
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-0 {
+    --transition-duration: 0ms;
+    -webkit-transition-duration: 0ms;
+            transition-duration: 0ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-100 {
+    --transition-duration: 100ms;
+    -webkit-transition-duration: 100ms;
+            transition-duration: 100ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-250 {
+    --transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-500 {
+    --transition-duration: 500ms;
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-750 {
+    --transition-duration: 750ms;
+    -webkit-transition-duration: 750ms;
+            transition-duration: 750ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-1000 {
+    --transition-duration: 1000ms;
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+
+  .xl\:transition-linear {
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+  }
+
+  .xl\:transition-ease {
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+  }
+
+  .xl\:transition-ease-in {
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+
+  .xl\:transition-ease-out {
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+  }
+
+  .xl\:transition-ease-in-out {
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+
+  .xl\:transition-delay-0 {
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+  }
+
+  .xl\:transition-delay-100 {
+    -webkit-transition-delay: 100ms;
+            transition-delay: 100ms;
+  }
+
+  .xl\:transition-delay-250 {
+    -webkit-transition-delay: 250ms;
+            transition-delay: 250ms;
+  }
+
+  .xl\:transition-delay-500 {
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+  }
+
+  .xl\:transition-delay-750 {
+    -webkit-transition-delay: 750ms;
+            transition-delay: 750ms;
+  }
+
+  .xl\:transition-delay-1000 {
+    -webkit-transition-delay: 1000ms;
+            transition-delay: 1000ms;
+  }
+
+  .xl\:will-change-auto {
+    will-change: auto;
+  }
+
+  .xl\:will-change-scroll {
+    will-change: scroll-position;
+  }
+
+  .xl\:will-change-contents {
+    will-change: contents;
+  }
+
+  .xl\:will-change-opacity {
+    will-change: opacity;
+  }
+
+  .xl\:will-change-transform {
+    will-change: transform;
   }
 }

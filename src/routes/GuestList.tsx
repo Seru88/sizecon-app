@@ -1,13 +1,12 @@
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import guestList from "../assets/guests.json";
 import Card from "../components/Card";
+import Toggle from "../components/Toggle";
 import useBookmarks from "../hooks/useBookmarks";
 import firebaseApp from "../util/firebaseApp";
-import Toggle from "../components/Toggle";
 
 const GuestList: React.FC = () => {
   // const { day_one: saturday, day_two: sunday } = eventSchedule.schedule_2020;
@@ -31,9 +30,10 @@ const GuestList: React.FC = () => {
 
   return (
     <div>
-      {/* <h1 className="text-2xl">Special Guests</h1> */}
       {bookmarks && (
-        <Toggle onChange={handleCheckbox}>Show bookmarks</Toggle>
+        <div className="flex justify-end w-full my-2">
+          <Toggle onChange={handleCheckbox}>Show bookmarks</Toggle>
+        </div>
       )}
       <ul>
         {guests.map((guest, i) => {

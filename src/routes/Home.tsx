@@ -19,7 +19,7 @@ const navItems: NavObj[] = [
   { path: '/floor-map', icon: 'map', label: 'Floor Map' },
   { path: '/rules', icon: 'gavel', label: 'Rules' },
   { path: '/discord', icon: ['fab', 'discord'], label: 'Discord' },
-  { path: '/local-guide', icon: 'search-location', label: 'Local Guide' },
+  // { path: '/local-guide', icon: 'search-location', label: 'Local Guide' },
   // { path: '/bookmarks', icon: 'bookmark', label: 'Your Bookmarks' },
   { path: '/login', icon: 'sign-in-alt', label: 'Log in' },
   { path: '/logout', icon: 'sign-out-alt', label: 'Log out' },

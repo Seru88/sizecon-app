@@ -1,16 +1,15 @@
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import classed from "classed-components";
-import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useHistory } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classed from 'classed-components';
+import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useHistory } from 'react-router-dom';
 
-import eventSchedule from "../assets/schedule.json";
-import Card from "../components/Card";
-import Toggle from "../components/Toggle";
-import useBookmarks from "../hooks/useBookmarks";
-import firebaseApp from "../util/firebaseApp";
-import getFormattedEventTime from "../util/getFormattedEventTime";
+import eventSchedule from '../assets/schedule.json';
+import Card from '../components/Card';
+import Toggle from '../components/Toggle';
+import useBookmarks from '../hooks/useBookmarks';
+import firebaseApp from '../util/firebaseApp';
+import getFormattedEventTime from '../util/getFormattedEventTime';
 
 const DayButton = classed.button<{ current?: boolean }>`
   w-1/3
@@ -55,7 +54,6 @@ const Schedule: React.FC = () => {
 
   return (
     <div>
-      {/* <h1 className="text-2xl">Event Schedule</h1> */}
       <div className="flex items-center justify-between w-full my-2">
         <div className="flex-grow">
           <DayButton current={day === "sat"} onClick={handleDayToggle("sat")}>
@@ -65,12 +63,10 @@ const Schedule: React.FC = () => {
             Sunday
           </DayButton>
         </div>
-
         {bookmarks && (
           <Toggle onChange={handleBookmarkToggle}>Show bookmarks</Toggle>
         )}
       </div>
-
       <ul>
         {eventsToDisplay.map((event, i) => {
           const isBookmarked = bookmarks?.includes(event.slug);
@@ -104,7 +100,6 @@ const Schedule: React.FC = () => {
                   </button>
                 </div>
               </Card>
-              {/* </button> */}
             </li>
           );
         })}
