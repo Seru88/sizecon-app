@@ -15,13 +15,13 @@ const DayButton = classed.button<{ current?: boolean }>`
   w-1/3
   border
   rounded-lg
-  border-green-300
+  border-green-600
   h-8
   focus:outline-none
   mx-2
   font-bold
   ${({ current }) =>
-    current ? "bg-green-500 text-white" : "bg-white text-black"}
+    current ? "bg-green-600 text-white" : "bg-white text-green-700"}
 `;
 
 const Schedule: React.FC = () => {

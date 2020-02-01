@@ -1,5 +1,9 @@
 import { library as iconLibray } from '@fortawesome/fontawesome-svg-core';
-import { faDiscord, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import {
+  faDiscord,
+  faGoogle,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 import { faBookmark as farBookmark } from '@fortawesome/free-regular-svg-icons';
 import {
   faArrowLeft,
@@ -15,6 +19,7 @@ import {
   faStar,
   faUserPlus,
   faHeart,
+  faCircleNotch,
 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -22,6 +27,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import AlertProvider from './containers/AlertProvider';
 import routes from './routes';
 import firebaseApp from './util/firebaseApp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 iconLibray.add(
   faCalendar,
@@ -33,6 +39,7 @@ iconLibray.add(
   faSignOutAlt,
   faUserPlus,
   faHeart,
+  faCircleNotch,
   faArrowLeft,
   faBookmark,
   farBookmark,
@@ -52,15 +59,13 @@ export const AppContext = React.createContext<{
 const App: React.FC = () => {
   const [, initialising] = useAuthState(firebaseApp.auth());
   return (
-    <div className="m-auto antialiased text-center font-main">
+    <div className="m-auto antialiased font-main">
       {initialising ? (
-        <div>Loading...</div>
+        <div className="flex items-center justify-center w-screen h-screen text-6xl text-green-500">
+          <FontAwesomeIcon icon="circle-notch" spin />
+        </div>
       ) : (
-        <AlertProvider>
-          {/* <Header /> */}
-          {/* <main className="max-w-sm p-6 mx-auto">{routes}</main> */}
-          {routes}
-        </AlertProvider>
+        <AlertProvider>{routes}</AlertProvider>
       )}
     </div>
   );

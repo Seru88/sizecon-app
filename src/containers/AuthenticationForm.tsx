@@ -22,24 +22,24 @@ const AuthenticationForm: React.FC<{
       .auth()
       .signInWithEmailAndPassword(data.email, data.password)
       .then(() =>
-        enqueueAlert('You are now logged in!', { variant: 'success' })
+        enqueueAlert("You are now logged in!", { variant: "success" })
       )
-      .catch(reason => enqueueAlert(reason.message, { variant: 'error' }));
+      .catch(reason => enqueueAlert(reason.message, { variant: "error" }));
   };
 
   const signup = (data: Record<string, any>) => {
     if (data.password !== data.confirm) {
-      enqueueAlert('Passwords do not match', { variant: 'error' });
+      enqueueAlert("Passwords do not match", { variant: "error" });
     } else {
       firebaseApp
         .auth()
         .createUserWithEmailAndPassword(data.email, data.password)
         .then(() =>
-          enqueueAlert('Account created! You are now logged in.', {
-            variant: 'success',
+          enqueueAlert("Account created! You are now logged in.", {
+            variant: "success"
           })
         )
-        .catch(reason => enqueueAlert(reason.message, { variant: 'error' }));
+        .catch(reason => enqueueAlert(reason.message, { variant: "error" }));
     }
   };
 
@@ -47,12 +47,14 @@ const AuthenticationForm: React.FC<{
     firebaseApp
       .auth()
       .signInWithRedirect(googleAuthProvider)
-      .catch(reason => enqueueAlert(reason.message, { variant: 'error' }));
+      .catch(reason => enqueueAlert(reason.message, { variant: "error" }));
   };
 
-  if (user) {
-    history.push('/');
-  }
+  React.useEffect(() => {
+    if (user) {
+      history.push("/");
+    }
+  }, [user, history]);
 
   return (
     <div className="w-full">
@@ -62,48 +64,48 @@ const AuthenticationForm: React.FC<{
       >
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-lg font-bold mb-2"
+            className="block mb-2 text-lg font-bold text-gray-700"
             htmlFor="email"
           >
             Email
           </label>
           <input
             name="email"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
             id="email"
             type="text"
             placeholder="Email"
-            ref={register({ required: 'Eamil required' })}
+            ref={register({ required: "Eamil required" })}
           />
           {validationErrors.email && (
-            <div className="text-red-600 mt-1">
+            <div className="mt-1 text-red-600">
               {(validationErrors.email as FieldError).message}
             </div>
           )}
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-lg font-bold mb-2"
+            className="block mb-2 text-lg font-bold text-gray-700"
             htmlFor="password"
           >
             Password
           </label>
           <input
             name="password"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
             placeholder="******************"
             ref={register({
-              required: 'Password required',
+              required: "Password required",
               minLength: {
                 value: 6,
-                message: 'Must be minimum of 6 characters',
-              },
+                message: "Must be minimum of 6 characters"
+              }
             })}
           />
           {validationErrors.password && (
-            <div className="text-red-600 mt-1">
+            <div className="mt-1 text-red-600">
               {(validationErrors.password as FieldError).message}
             </div>
           )}
@@ -111,27 +113,27 @@ const AuthenticationForm: React.FC<{
         {registering && (
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-lg font-bold mb-2"
+              className="block mb-2 text-lg font-bold text-gray-700"
               htmlFor="confirm-password"
             >
               Retype Password
             </label>
             <input
               name="confirm"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
               id="confirm-password"
               type="password"
               placeholder="******************"
               ref={register({
-                required: 'Please retype password',
+                required: "Please retype password",
                 minLength: {
                   value: 6,
-                  message: 'Must be minimum of 6 characters',
-                },
+                  message: "Must be minimum of 6 characters"
+                }
               })}
             />
             {validationErrors.confirm && (
-              <div className="text-red-600 mt-1">
+              <div className="mt-1 text-red-600">
                 {(validationErrors.confirm as FieldError).message}
               </div>
             )}
@@ -143,15 +145,15 @@ const AuthenticationForm: React.FC<{
             type="submit"
             fullwidth={registering}
           >
-            <div className="w-8 inline-block">
+            <div className="inline-block w-8">
               <FontAwesomeIcon icon="envelope" />
             </div>
             {` `}
-            {!registering ? 'Log in' : 'Sign up with email'}
+            {!registering ? "Log in" : "Sign up with email"}
           </Button>
           {!registering && (
             <Link
-              className="inline-block align-baseline font-bold text-lg text-green-500 hover:text-blue-800"
+              className="inline-block text-lg font-bold text-green-500 align-baseline hover:text-blue-800"
               to="/reset-password"
             >
               Forgot Password?
@@ -161,37 +163,37 @@ const AuthenticationForm: React.FC<{
         <div className="mx-auto text-lg font-bold">or</div>
         <div className="mt-4 mb-8">
           <button
-            className=" bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 mb-3 w-full block border border-gray-400 rounded shadow text-xl text-left"
+            className="block w-full px-4 py-2 mb-3 text-xl font-semibold text-left text-white bg-red-600 border border-gray-400 rounded shadow hover:bg-red-700"
             type="button"
             onClick={oAuthGoogle}
           >
-            <div className="w-8 inline-block">
-              <FontAwesomeIcon icon={['fab', 'google']} />
+            <div className="inline-block w-8">
+              <FontAwesomeIcon icon={["fab", "google"]} />
             </div>
             {` `}
-            {registering ? 'Sign up with Google' : 'Log in with Google'}
+            {registering ? "Sign up with Google" : "Log in with Google"}
           </button>
           <button
-            className=" bg-twitter hover:bg-twitter-darker text-white font-semibold py-2 px-4 my-3 w-full block border border-gray-400 rounded shadow text-xl text-left"
+            className="block w-full px-4 py-2 my-3 text-xl font-semibold text-left text-white border border-gray-400 rounded shadow bg-twitter hover:bg-twitter-darker"
             type="button"
           >
-            <div className="w-8 inline-block">
-              <FontAwesomeIcon icon={['fab', 'twitter']} />
+            <div className="inline-block w-8">
+              <FontAwesomeIcon icon={["fab", "twitter"]} />
             </div>
             {` `}
-            {registering ? 'Sign up with Twitter' : 'Log in with Twitter'}
+            {registering ? "Sign up with Twitter" : "Log in with Twitter"}
           </button>
         </div>
         {!registering && (
-          <div className="mt-8 mx-auto text-center">
-            Don't have an account? Register{' '}
-            <Link className="text-green-500 font-bold" to="/signup">
+          <div className="mx-auto mt-8 text-center">
+            Don't have an account? Register{" "}
+            <Link className="font-bold text-green-500" to="/signup">
               here
             </Link>
           </div>
         )}
       </form>
-      {/* {error && <div className="text-red-600 mt-5">{error.message}</div>} */}
+      {/* {error && <div className="mt-5 text-red-600">{error.message}</div>} */}
     </div>
   );
 };

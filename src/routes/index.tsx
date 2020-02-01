@@ -11,6 +11,7 @@ import Home from './Home';
 import Login from './Login';
 import Logout from './Logout';
 import ResetPassword from './ResetPassword';
+import Rules from './Rules';
 import Schedule from './Schedule';
 import Signup from './Signup';
 
@@ -33,37 +34,38 @@ import Signup from './Signup';
 // };
 
 const defaultStyle: React.CSSProperties = {
-  position: "inherit"
+  position: 'inherit',
 };
 
 const transitionStyles: Partial<Record<
   TransitionStatus,
   React.CSSProperties
 >> = {
-  entering: { opacity: 0, transform: "scale(1.1)" },
+  entering: { opacity: 0, transform: 'scale(1.1)' },
   entered: {
     opacity: 1,
-    transform: "scale(1)",
-    transition: "opacity 200ms, transform 200ms"
+    transform: 'scale(1)',
+    transition: 'opacity 200ms, transform 200ms',
   },
-  exiting: { opacity: 1, transform: "scale(1)" },
+  exiting: { opacity: 1, transform: 'scale(1)' },
   exited: {
     opacity: 0,
-    transform: "scale(0.9)",
-    transition: "opacity 200ms, transform 200ms"
-  }
+    transform: 'scale(0.9)',
+    transition: 'opacity 200ms, transform 200ms',
+  },
 };
 
 const paths = [
-  { path: "/", component: Home },
-  { path: "/schedule", component: Schedule },
-  { path: "/guests", component: GuestList },
-  { path: "/floor-map", component: FloorMap },
-  { path: "/event/:slug", component: Event },
-  { path: "/login", component: Login },
-  { path: "/logout", component: Logout },
-  { path: "/signup", component: Signup },
-  { path: "/reset-password", component: ResetPassword }
+  { path: '/', component: Home },
+  { path: '/schedule', component: Schedule },
+  { path: '/guests', component: GuestList },
+  { path: '/floor-map', component: FloorMap },
+  { path: '/rules', component: Rules },
+  { path: '/event/:slug', component: Event },
+  { path: '/login', component: Login },
+  { path: '/logout', component: Logout },
+  { path: '/signup', component: Signup },
+  { path: '/reset-password', component: ResetPassword },
 ];
 
 const routes = (
@@ -83,7 +85,7 @@ const routes = (
                 <div
                   style={{
                     ...defaultStyle,
-                    ...transitionStyles[state]
+                    ...transitionStyles[state],
                   }}
                 >
                   <Component />

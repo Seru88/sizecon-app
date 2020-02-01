@@ -54,7 +54,6 @@ const GuestList: React.FC = () => {
       <ul>
         {guests.map((guest, i) => {
           const isBookmarked = bookmarks?.includes(guest.slug);
-          const icon = isBookmarked ? "bookmark" : ["far", "bookmark"];
           return (
             <li key={i}>
               <Card className="my-5">

@@ -37,7 +37,9 @@ const Header: React.FC = () => {
     } else {
       setTop('-100px');
     }
-    prevScrollPos = currScrollPos;
+    // * adding an offset of 3 creates a nice elastic feel
+    // ? decide wether we want this behaviour
+    prevScrollPos = currScrollPos + 3;
   };
 
   const handleGoBack = () => {
@@ -60,11 +62,11 @@ const Header: React.FC = () => {
   if (rootMatch?.isExact) {
     return (
       <header
-        className="w-full h-13 bg-green-400 shadow flex flex-col shadow-lg justify-center fixed transition-top z-50"
+        className="fixed z-50 flex flex-col justify-center w-full text-center bg-green-400 shadow shadow-lg h-13 transition-top"
         style={{ top: top }}
       >
         <div className="cursor-pointer" onClick={handleClick}>
-          <span className="text-white text-5xl font-bold">SIZECON</span>
+          <span className="text-5xl font-bold text-white">SIZECON</span>
           {` `}
           <span className="text-2xl text-green-800">2020</span>
         </div>
@@ -74,17 +76,17 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className="w-full h-13 bg-green-400 shadow shadow-lg fixed transition-top z-50"
+      className="fixed z-50 w-full text-center bg-green-400 shadow shadow-lg h-13 transition-top"
       style={{ top: top }}
     >
-      <div className="w-full relative">
+      <div className="relative w-full">
         <button
-          className="mx-4 text-white text-4xl absolute left-0 inset-y-0 focus:outline-none"
+          className="absolute inset-y-0 left-0 mx-4 text-4xl text-white focus:outline-none"
           onClick={handleGoBack}
         >
           <FontAwesomeIcon icon="arrow-left" />
         </button>
-        <div className="text-white text-5xl font-bold mx-auto">
+        <div className="mx-auto text-5xl font-bold text-white">
           {getPageLabel(location.pathname)}
         </div>
       </div>
