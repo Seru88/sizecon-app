@@ -1,19 +1,18 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Transition } from 'react-transition-group';
+import { TransitionStatus } from 'react-transition-group/Transition';
 
-import Header from "../components/Header";
-import Event from "./Event";
-import FloorMap from "./FloorMap";
-import GuestList from "./GuestList";
-import Home from "./Home";
-import Login from "./Login";
-import Logout from "./Logout";
-import ResetPassword from "./ResetPassword";
-import Schedule from "./Schedule";
-import Signup from "./Signup";
-
-import { Transition, CSSTransition } from "react-transition-group";
-import { TransitionStatus } from "react-transition-group/Transition";
+import Header from '../components/Header';
+import Event from './Event';
+import FloorMap from './FloorMap';
+import GuestList from './GuestList';
+import Home from './Home';
+import Login from './Login';
+import Logout from './Logout';
+import ResetPassword from './ResetPassword';
+import Schedule from './Schedule';
+import Signup from './Signup';
 
 // import { useAuthState } from 'react-firebase-hooks/auth';
 // import { firebaseApp } from '../App';
@@ -47,7 +46,7 @@ const transitionStyles: Partial<Record<
     transform: "scale(1)",
     transition: "opacity 200ms, transform 200ms"
   },
-  exiting: { opacity: 1, transform: "scale(1)"},
+  exiting: { opacity: 1, transform: "scale(1)" },
   exited: {
     opacity: 0,
     transform: "scale(0.9)",
@@ -77,7 +76,6 @@ const routes = (
             <Transition
               in={match !== null}
               timeout={200}
-              // classNames="route"
               mountOnEnter
               unmountOnExit
             >
@@ -92,17 +90,6 @@ const routes = (
                 </div>
               )}
             </Transition>
-            // <CSSTransition
-            //   in={match !== null}
-            //   timeout={300}
-            //   classNames="route"
-            //   mountOnEnter
-            //   unmountOnExit
-            // >
-            //   <div className="route">
-            //     <Component />
-            //   </div>
-            // </CSSTransition>
           )}
         </Route>
       ))}
