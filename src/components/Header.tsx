@@ -37,9 +37,7 @@ const Header: React.FC = () => {
     } else {
       setTop('-100px');
     }
-    // * adding an offset of 3 creates a nice elastic feel
-    // ? decide wether we want this behaviour
-    prevScrollPos = currScrollPos + 3;
+    prevScrollPos = currScrollPos;
   };
 
   const handleGoBack = () => {

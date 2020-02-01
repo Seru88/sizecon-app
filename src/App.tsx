@@ -61,8 +61,11 @@ const App: React.FC = () => {
   return (
     <div className="m-auto antialiased font-main">
       {initialising ? (
-        <div className="flex items-center justify-center w-screen h-screen text-6xl text-green-500">
-          <FontAwesomeIcon icon="circle-notch" spin />
+        <div className="flex flex-col items-center justify-center w-screen h-screen text-6xl text-green-500">
+          <span className="text-5xl font-bold">SIZECON</span>
+          {` `}
+          <span className="text-2xl text-green-800">2020</span>
+          <FontAwesomeIcon className="p-2" icon="circle-notch" spin />
         </div>
       ) : (
         <AlertProvider>{routes}</AlertProvider>
