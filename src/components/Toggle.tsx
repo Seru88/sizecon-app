@@ -14,7 +14,7 @@ const Toggle: React.FC<Omit<
   };
 
   return (
-    <div className="">
+    <div className="text-center">
       {/* <!-- Toggle Button --> */}
       <label htmlFor="toogleA" className="flex items-center">
         {/* <!-- toggle --> */}

@@ -72,12 +72,12 @@ const GuestList: React.FC = () => {
                     className="w-10/12 px-4 py-2 focus:outline-none"
                     onClick={handleClick(guest.website.link)}
                   >
-                    <div className="mr-12 text-2xl text-left">{guest.name}</div>
-                    <div className="mr-12 text-sm text-left">
+                    <div className="text-2xl text-left">{guest.name}</div>
+                    <div className="text-sm text-left">
                       {guest.description}
                     </div>
                   </button>
-                  <div className="w-2/12">
+                  <div className="w-2/12 pr-3">
                     <button
                       className={`w-12 h-12 p-1 border-2 ${
                         isBookmarked

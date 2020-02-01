@@ -82,7 +82,7 @@ const Schedule: React.FC = () => {
                     {getFormattedEventTime(event.begin, event.end)}
                   </div>
                 </button>
-                <div className="w-2/12">
+                <div className="w-2/12 pr-3">
                   <button
                     className={`w-12 h-12 p-1 border-2 ${
                       isBookmarked
