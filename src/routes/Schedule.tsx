@@ -63,7 +63,7 @@ const Schedule: React.FC = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between w-full my-2">
+      <div className="flex items-center justify-between w-full mb-2">
         <div className="flex-grow">
           <DayButton current={index === 0} onClick={handleDayToggle(0)}>
             Saturday
