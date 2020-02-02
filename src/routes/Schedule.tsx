@@ -20,8 +20,10 @@ const DayButton = classed.button<{ current?: boolean }>`
   border-green-600
   h-8
   focus:outline-none
-  mx-2
+  m-1
   font-bold
+  text-sm
+  p-1
   ${({ current }) =>
     current ? 'bg-green-600 text-white' : 'bg-white text-green-700'}
 `;
@@ -62,7 +64,7 @@ const Schedule: React.FC = () => {
   return (
     <div>
       <div className="flex items-center justify-between w-full my-2">
-        <div className="flex-grow my-2">
+        <div className="flex-grow">
           <DayButton current={index === 0} onClick={handleDayToggle(0)}>
             Saturday
           </DayButton>

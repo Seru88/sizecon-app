@@ -20,6 +20,8 @@ const GuestButton = classed.button<{ current?: boolean }>`
   focus:outline-none
   m-1
   font-bold
+  text-sm
+  p-1
   ${({ current }) =>
     current ? 'bg-green-600 text-white' : 'bg-white text-green-700'}
 `;
@@ -59,22 +61,24 @@ const GuestList: React.FC = () => {
 
   return (
     <div className="h-screen">
-      <div className="flex items-center justify-between w-full mt-1 mb-2">
-        <div className="flex flex-wrap justify-around flex-grow">
-          <GuestButton current={index === 0} onClick={handleGuestChange(0)}>
-            Talents
-          </GuestButton>
-          <GuestButton current={index === 1} onClick={handleGuestChange(1)}>
-            Exhibitors
-          </GuestButton>
-          <GuestButton current={index === 2} onClick={handleGuestChange(2)}>
-            Artists
-          </GuestButton>
-          <GuestButton current={index === 3} onClick={handleGuestChange(3)}>
-            Writers
-          </GuestButton>
+      <div className="flex items-center justify-between w-11/12 mx-auto mb-2">
+        <GuestButton current={index === 0} onClick={handleGuestChange(0)}>
+          Talents
+        </GuestButton>
+        <GuestButton current={index === 1} onClick={handleGuestChange(1)}>
+          Exhibitors
+        </GuestButton>
+        <GuestButton current={index === 2} onClick={handleGuestChange(2)}>
+          Artists
+        </GuestButton>
+        <GuestButton current={index === 3} onClick={handleGuestChange(3)}>
+          Writers
+        </GuestButton>
+        {bookmarks && (
+          <div className="m-2">
+          <Toggle onChange={handleCheckbox}>Show bookmarks</Toggle>
         </div>
-        {bookmarks && <Toggle onChange={handleCheckbox} />}
+        )}
       </div>
       {/* {bookmarks && (
         <div className="flex justify-end w-full my-2">

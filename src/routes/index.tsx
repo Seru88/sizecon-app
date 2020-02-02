@@ -71,7 +71,7 @@ const paths = [
 const routes = (
   <BrowserRouter basename="/">
     <Header />
-    <main className="relative max-w-sm py-6 mx-auto mt-16">
+    <main className="relative max-w-sm px-2 py-6 mx-auto mt-16">
       {paths.map(({ path, component: Component }) => (
         <Route key={path} exact path={path}>
           {({ match }) => (
