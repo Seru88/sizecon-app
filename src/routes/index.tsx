@@ -77,7 +77,7 @@ const routes = (
           {({ match }) => (
             <Transition
               in={match !== null}
-              timeout={200}
+              timeout={100}
               mountOnEnter
               unmountOnExit
             >
