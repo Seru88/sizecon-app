@@ -76,15 +76,10 @@ const GuestList: React.FC = () => {
         </GuestButton>
         {bookmarks && (
           <div className="m-2">
-          <Toggle onChange={handleCheckbox}>Show bookmarks</Toggle>
-        </div>
+            <Toggle onChange={handleCheckbox}/>
+          </div>
         )}
       </div>
-      {/* {bookmarks && (
-        <div className="flex justify-end w-full my-2">
-          <Toggle onChange={handleCheckbox}>Show bookmarks</Toggle>
-        </div>
-      )} */}
       <SwipeableViews
         containerStyle={{
           height: '100vh',

@@ -63,16 +63,18 @@ const Schedule: React.FC = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between w-full mb-2">
-        <div className="flex-grow">
-          <DayButton current={index === 0} onClick={handleDayToggle(0)}>
-            Saturday
-          </DayButton>
-          <DayButton current={index === 1} onClick={handleDayToggle(1)}>
-            Sunday
-          </DayButton>
-        </div>
-        {bookmarks && <Toggle onChange={handleBookmarkToggle} />}
+      <div className="flex items-center justify-between w-11/12 mx-auto mb-2">
+        <DayButton current={index === 0} onClick={handleDayToggle(0)}>
+          Saturday
+        </DayButton>
+        <DayButton current={index === 1} onClick={handleDayToggle(1)}>
+          Sunday
+        </DayButton>
+        {bookmarks && (
+          <div className="ml-6">
+            <Toggle onChange={handleBookmarkToggle}/>
+          </div>
+        )}
       </div>
       <SwipeableViews
         index={index}

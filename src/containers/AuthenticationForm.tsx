@@ -160,7 +160,7 @@ const AuthenticationForm: React.FC<{
             </Link>
           )}
         </div>
-        <div className="mx-auto text-lg font-bold">or</div>
+        <div className="mx-auto text-lg font-bold text-center">or</div>
         <div className="mt-4 mb-8">
           <button
             className="block w-full px-4 py-2 mb-3 text-xl font-semibold text-left text-white bg-red-600 border border-gray-400 rounded shadow hover:bg-red-700"
@@ -173,7 +173,7 @@ const AuthenticationForm: React.FC<{
             {` `}
             {registering ? "Sign up with Google" : "Log in with Google"}
           </button>
-          <button
+          {/* <button
             className="block w-full px-4 py-2 my-3 text-xl font-semibold text-left text-white border border-gray-400 rounded shadow bg-twitter hover:bg-twitter-darker"
             type="button"
           >
@@ -182,7 +182,7 @@ const AuthenticationForm: React.FC<{
             </div>
             {` `}
             {registering ? "Sign up with Twitter" : "Log in with Twitter"}
-          </button>
+          </button> */}
         </div>
         {!registering && (
           <div className="mx-auto mt-8 text-center">
