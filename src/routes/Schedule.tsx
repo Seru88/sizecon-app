@@ -107,7 +107,7 @@ const Schedule: React.FC = () => {
             className="w-10/12 px-4 py-2"
             onClick={handleClick(event.slug)}
           >
-            <div className="mr-12 text-xl text-left">{event.name}</div>
+            <div className="mr-12 text-xl font-bold text-left">{event.name}</div>
             <div className="text-left">
               {getFormattedEventTime(event.begin, event.end)}
             </div>

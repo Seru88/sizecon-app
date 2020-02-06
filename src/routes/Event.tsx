@@ -21,17 +21,16 @@ const Event: React.FC = () => {
   return (
     <div className="text-left">
       {/* <h1 className="text-3xl">{event.name}</h1> */}
-      <div className="my-1">
+      <div className="my-1 text-2xl">
         {getFormattedEventTime(event.begin, event.end)}
       </div>
-      <div className="my-1">Room ???</div>
+      <div className="my-1">Room: <strong>TBA</strong></div>
       {event.description &&
         event.description.split('\n').map((section, i) => (
           <p key={i} className="text-xl my-4">
             {section}
           </p>
         ))}
-      <div className="text-xs my-3">Notes ...</div>
       {user && slug && <BookmarkButton user={user} slug={slug} />}
     </div>
   );

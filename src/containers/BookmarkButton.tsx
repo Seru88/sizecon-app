@@ -18,16 +18,20 @@ const BookmarkButton: React.FC<{
 
   if (error) console.error(error);
 
+  const isBookmarked = bookmarks?.includes(slug);
+
   return (
     <div className="mt-10 mb-4">
       {!loading && (
-        <Button className="text-3xl text-left" fullwidth onClick={onClick}>
+        <Button className="text-2xl text-left" fullwidth onClick={onClick}>
           <div className="w-8 inline-block">
-            <FontAwesomeIcon icon="plus" />
+            {isBookmarked ? (
+              <FontAwesomeIcon icon="minus" />
+            ) : (
+              <FontAwesomeIcon icon="plus" />
+            )}
           </div>
-          {bookmarks && bookmarks.find(bm => bm === slug) === undefined
-            ? 'Add to bookmarks'
-            : 'Remove from bookmarks'}
+          {isBookmarked ? 'Remove from bookmarks' : 'Add to bookmarks'}
         </Button>
       )}
     </div>

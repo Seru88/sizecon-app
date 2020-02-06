@@ -125,11 +125,11 @@ const GuestList: React.FC = () => {
           </button>
           <div className="flex items-center justify-between">
             <button
-              className="w-10/12 px-4 py-2 focus:outline-none"
+              className="w-10/12 px-2 py-2 focus:outline-none"
               onClick={handleClick(guest.website.link)}
             >
-              <div className="text-2xl text-left">{guest.name}</div>
-              <div className="text-sm text-left">{guest.description}</div>
+              <div className="text-2xl font-bold text-left">{guest.name}</div>
+              <div className="text-left">{guest.description}</div>
             </button>
             <div className="w-2/12 pr-3">
               <button

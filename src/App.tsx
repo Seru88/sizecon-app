@@ -13,6 +13,7 @@ import {
   faGavel,
   faMap,
   faPlus,
+  faMinus,
   faSearchLocation,
   faSignInAlt,
   faSignOutAlt,
@@ -45,6 +46,7 @@ iconLibray.add(
   farBookmark,
   faEnvelope,
   faPlus,
+  faMinus,
   faDiscord,
   faGoogle,
   faTwitter
