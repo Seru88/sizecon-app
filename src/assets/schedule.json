@@ -5,6 +5,14 @@
       "end": 0,
       "events": [
         {
+          "name": "American Breakfast Buffet",
+          "slug": "american-breakfast-buffet",
+          "location": "Fusions Restaurant",
+          "begin": 730,
+          "end": 1030,
+          "description": "Scrambled Eggs, Omelette Station, Breakfast Sausage, Bacon, Waffles, Pancakes, Breakfast Potatoes, Oatmeal, Cream of Wheat, Toast, Bagels, Assorted Danishes, Fresh Fruit - Juices, Tea, Coffee and Decaf Coffee. "
+        },
+        {
           "name": "Opening Ceremony",
           "slug": "opening-ceremony",
           "location": "SALON C",
@@ -84,6 +92,14 @@
           "location": "SALON A",
           "begin": 1100,
           "description": "Welcome to the Men love Men social - A space at Size Con for men to talk to other men about their love for growing, shrinking and/or expanding dudes!"
+        },
+        {
+          "name": "Fried Chicken Lunch ",
+          "slug": "fried-chicken-lunch",
+          "location": "Fusions Restaurant",
+          "begin": 1200,
+          "end": 1400,
+          "description": "Fried Chicken, Pasta Salad, Mashed Potatoes, Chef’s Soup of the Day, Special SizeCon Dessert - Tea, Coffee, Decaf and assorted Sodas."
         },
         {
           "name": "Cosplay Parade",
@@ -210,6 +226,14 @@
           "begin": 1900,
           "description": "Thirsty? Join us for an unforgettable Giant Man experience at our new and improved interactive Role-Play and Variety Cafe Show experience! Headlined by the talented and hunky Miles Striker, featuring Leucan and his Magical Endoscope performance and GiantGripper's tantalizing burlesque - Entry is free, so don't miss it! Complementary Tea or Coffee is available if you can convice our staff of tall bois to even notice you."
         },
+        {
+          "name": "Spanish-Style Dinner",
+          "slug": "spanish-style-dinner",
+          "location": "Fusions Restaurant",
+          "begin": 1900,
+          "end": 2030,
+          "description": "Seafood Paella, Spanish-Style Potato Omelette, Grilled Chorizos, Fresh Garden Salad, Bread Rolls & Butter, Fried Cheesecake - Tea, Coffee, Decaf Coffee and assorted Sodas."
+        },
 
         {
           "name": "Inflation & Expansion Panel",
@@ -291,6 +315,14 @@
       "end": 0,
       "events": [
         {
+          "name": "American Breakfast Buffet",
+          "slug": "american-breakfast-buffet",
+          "location": "Fusions Restaurant",
+          "begin": 730,
+          "end": 1030,
+          "description": "Scrambled Eggs, Omelette Station, Breakfast Sausage, Bacon, Waffles, Pancakes, Breakfast Potatoes, Oatmeal, Cream of Wheat, Toast, Bagels, Assorted Danishes, Fresh Fruit - Juices, Tea, Coffee and Decaf Coffee. "
+        },
+        {
           "name": "Wonderland Way",
           "slug": "wonderland-way",
           "location": "Wonderland Way",
@@ -371,6 +403,14 @@
           "location": "SALON A",
           "begin": 1100,
           "description": "SizeCon programming expands to include its first ESCAPE ROOM!\nAn enthusiastic attendee to SizeCon brought along a bottle marked \"Drink Me\" with the hopes of experiencing their fantasy. Well, the potion may have worked too well because that Con-goer is now missing. Certain items were left behind with clues too small to be seen...unless teams of people are shrunk down to one-sixth their size. Who's willing to take a fantastic voyage and solve this oversized mystery? Can it be done in forty-five minutes before the reduction process reverts? Come to SizeCon 2020 and find out!"
+        },
+        {
+          "name": "Hamburger Lunch",
+          "slug": "hamburger-lunch",
+          "location": "Fusions Restaurant",
+          "begin": 1200,
+          "end": 1400,
+          "description": "Hamburger, Cheeseburger or Veggie Burger, French Fries, Fresh Garden Salad, Chef’s Soup of the Day, Special SizeCon Dessert - Tea, Coffee, Decaf Coffee and assorted Sodas."
         },
         {
           "name": "Cosplay Parade",
@@ -492,6 +532,14 @@
           "location": "SALON A",
           "begin": 1800,
           "description": "¿Eres fanático de Gigantes, gente diminuto, expansión de pecho o otros fetiches? ¡Bueno, discuta con sus nuevos amigos en tu idioma!"
+        },
+        {
+          "name": "Italian-Style Dinner",
+          "slug": "italian-dinner",
+          "location": "Fusions Restaurant",
+          "begin": 1900,
+          "end": 2030,
+          "description": "Chicken with Fresh Basil and Tomato, Salmon with Dill Sauce, Herb Roasted Potatoes, Mixed Vegetables, Special SizeCon Dessert - Tea, Coffee, Decaf Coffee and assorted Sodas."
         },
         {
           "name": "Giantess & Tiny Men Social",

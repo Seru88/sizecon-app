@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 
   const handleGoBack = () => {
     if (eventMatch?.isExact) {
-      history.push('/schedule');
+      history.push('/schedule', location.state);
     } else if (passResetMatch?.isExact) {
       history.push('/login');
     } else {

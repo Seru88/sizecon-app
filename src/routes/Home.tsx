@@ -14,8 +14,8 @@ interface NavObj {
 }
 
 const navItems: NavObj[] = [
-  { path: '/schedule', icon: 'calendar', label: 'Event Schedule' },
-  { path: '/guests', icon: 'star', label: 'Guest' },
+  { path: '/schedule', icon: 'calendar', label: 'Schedule' },
+  { path: '/guests', icon: 'star', label: 'Guests' },
   { path: '/floor-map', icon: 'map', label: 'Floor Map' },
   { path: '/rules', icon: 'gavel', label: 'Rules' },
   { path: '/discord', icon: ['fab', 'discord'], label: 'Discord' },
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
                   onClick={handleClick(item.path)}
                   fullwidth
                 >
-                  <div className="inline-block w-8">
+                  <div className="inline-block w-10">
                     <FontAwesomeIcon icon={item.icon} />
                   </div>
                   {` `}

@@ -119,7 +119,7 @@ const GuestList: React.FC = () => {
   function renderGuest(guest: typeof guests[0], index: number) {
     const isBookmarked = bookmarks?.includes(guest.slug);
     return (
-      <li key={index}>
+      <li key={index} id={guest.slug}>
         <Card className={index === 0 ? 'mt-1 mb-5' : 'my-5'}>
           <button
             className="w-full focus:outline-none"

@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classed from 'classed-components';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import eventSchedule from '../assets/schedule.json';
 import Card from '../components/Card';
@@ -33,11 +33,14 @@ const Schedule: React.FC = () => {
   const [showBookmark, setShowBookmark] = React.useState(false);
   const [index, setIndex] = React.useState(0);
   const [user] = useAuthState(firebaseApp.auth());
+  const [exiting, setExiting] = React.useState(false);
   const [bookmarks, , , handleBookmark] = useBookmarks(user);
   const history = useHistory();
+  const location = useLocation();
 
   const handleClick = (slug: string) => () => {
-    history.push(`/event/${slug}`);
+    setExiting(true);
+    history.push(`/event/${slug}`, slug);
   };
 
   const handleDayToggle = (index: number) => () => {
@@ -45,7 +48,6 @@ const Schedule: React.FC = () => {
   };
 
   const handleBookmarkToggle = () => {
-    console.log('change');
     setShowBookmark(!showBookmark);
   };
 
@@ -60,6 +62,15 @@ const Schedule: React.FC = () => {
     satEvents = satEvents.filter(event => bookmarks?.includes(event.slug));
     sunEvents = sunEvents.filter(event => bookmarks?.includes(event.slug));
   }
+
+  React.useEffect(() => {
+    if (!exiting) {
+      const item = document.getElementById(location.state as string);
+      if (item) {
+        item.scrollIntoView({ block: 'center', inline: 'center' });
+      }
+    }
+  }, [location, exiting]);
 
   return (
     <div>
@@ -101,12 +112,9 @@ const Schedule: React.FC = () => {
   function renderEvent(event: typeof saturday.events[0], index: number) {
     const isBookmarked = bookmarks?.includes(event.slug);
     return (
-      <li key={index}>
+      <li key={index} id={event.slug}>
         <Card className="flex items-center justify-between my-4">
-          <button
-            className="w-10/12 p-2"
-            onClick={handleClick(event.slug)}
-          >
+          <button className="w-10/12 p-2" onClick={handleClick(event.slug)}>
             <div className="mr-12 text-xl font-bold text-left">
               {event.name}
             </div>
