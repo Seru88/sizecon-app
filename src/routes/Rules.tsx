@@ -12,57 +12,57 @@ const P = classed('p')`
   mb-10
 `;
 
-const rules = [
-  {
-    label: '18-plus-only',
-    iconSrc:
-      'https://images.squarespace-cdn.com/content/v1/56e86bc3746fb97fd1a89e39/1458115713672-VHLML6G8UPU3C7RLVR1Y/ke17ZwdGBToddI8pDm48kATjjHbO0u7YsmshsWDVW4FZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7cf54ar7ioAkmCKAxvko3gxPWD2_Zf5awnkR6C4bwON4sSyY6-ivP3jpH0jzS1sCaw/Our+aim+is+for+SizeCon+to+be+a+place+for+anyone+of+age+%2818%2B%29+to+gather+and+share+their+love+for+size.+Even+with+this+focus%2C+we+want+the+convention+to+be+a+place+that%E2%80%99s+just+as+welcoming+to+friends+and+family%2C+and+really+just+anyone+curious+about+size+in+general.+Most+important+is+that%2C+no+matter+who+shows+up%2C+the+convention+is+a+positive+space+and%2C+of+course%2C+a+whole+lot+of+fun.+The+rules+that+follow+will+help+us+ensure+a+positive+and+welcoming+space.+If+an+attendee+injures+this+atmosphere+at+any+time%2C+in+any+way%2C+SizeCon+staff+reserve+the+right+to+remove+the+attendee+from+the+convention.+Rules+and+Information+SizeCon+volunteer+staff+will+be+visible+on+the+convention+floor+thanks+to+their+special+badges.+Please+do+not+hesitate+to+reach+out+to+our+volunteers+with+any+questions+or+concerns+you+may+have.+SizeCon+attendees+must+wear+their+badge+at+all+times+during+the+convention%2C+or+have+them+ready+to+show+to+staff+if+asked.+That+is+to+say%2C+not+just+anyone+will+be+able+to+wander+into+the+convention%3A+this+is+a+private+space%2C+for+us.+In+general%2C+SizeCon+has+a+non-sexual+atmosphere%2C+with+special+areas+and+attractions+labeled+for+containing+or+allowing+adult+content.+Sexual+discussion+is+welcome+and+encouraged%2C+but+please+be+considerate%3A+outside+of+specially+marked+areas%2C+attendees+will+have+a+visible+flag+on+their+badge+which+notes+the+attendee%E2%80%99s+comfort+level+with+sexual+discussion.+For+many%2C+size+is+a+fetish.+At+SizeCon%2C+we+welcome+that+fetish%2C+as+well+as+the+size+fascinated+in+general.+Verbal+or+physical+harassment+of+any+kind%2C+stalking%2C+and+unwelcome+attention+will+not+be+tolerated.+Any+offending+attendees+may+be+asked+to+separate%2C+or%2C+if+necessary%2C+removed+from+the+convention.+Heinous+offenders+will+be+reported+to+the+police.+Cosplay+is+welcome+and+encouraged+inside+of+the+convention.+However%2C+outside+of+the+convention+doors%2C+such+as+inside+of+the+hosting+hotel%2C+attendees+are+asked+to+adhere+to+what+is+generally+considered+appropriate.+Please+help+us+keep+SizeCon+clean+and+considerate%2C+by+putting+all+your+trash+in+garbage+bins%2C+and+by+keeping+noise+levels+down+outside+of+the+convention+rooms%2C+including+in+hotel+room+parties+during+and+after+SizeCon.?format=300w',
-    msg: (
-      <>
-        Due to some of the material being sold at the convention, and the
-        subject matter of some of our panels,{' '}
-        <strong>SIZECON IS AN 18+ ONLY EVENT</strong>. However, SizeCon is not a
-        strictly sexual event: anyone who loves size is welcome!
-      </>
-    ),
-  },
-  {
-    label: 'judge-free',
-    iconSrc:
-      'https://images.squarespace-cdn.com/content/v1/56e86bc3746fb97fd1a89e39/1458115902315-KHFRRI8ZXQN1S2MSCU26/ke17ZwdGBToddI8pDm48kKAF85-Ra3izq36AdzLNBvtZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Wt5K3jmsiBpJAJjNxwpFT669VgN_RSjAohC6PfG0VdZLTEbt3C1shPi4w33kx3aEg/image-asset.png?format=300w',
-    msg: (
-      <>
-        SizeCon is a <strong>JUDGE FREE</strong> space. We are male, female,
-        gender-queer, LGBTQ, furry, lovers of fluffy and cruel fantasies alike.
-        It doesn’t matter who or how we love, but what we love: our common size
-        fascination is what’s bringing us all together.
-      </>
-    ),
-  },
-  {
-    label: 'zero-tolerance',
-    iconSrc:
-      'https://images.squarespace-cdn.com/content/v1/56e86bc3746fb97fd1a89e39/1458115827707-COZHYX0WDZIOZT0DROAK/ke17ZwdGBToddI8pDm48kKAF85-Ra3izq36AdzLNBvtZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Wt5K3jmsiBpJAJjNxwpFT669VgN_RSjAohC6PfG0VdZLTEbt3C1shPi4w33kx3aEg/image-asset.png?format=300w',
-    msg: (
-      <>
-        SizeCon has a <strong>ZERO TOLERANCE POLICY</strong> for harassment of
-        any kind. To make sure all guests are comfortable during the event we
-        will have security present at all times.
-      </>
-    ),
-  },
-  {
-    label: 'stay-connected',
-    iconSrc:
-      'https://images.squarespace-cdn.com/content/v1/56e86bc3746fb97fd1a89e39/1458116270946-AI89JY5W5QFPBRQ1PGCL/ke17ZwdGBToddI8pDm48kKAF85-Ra3izq36AdzLNBvtZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Wt5K3jmsiBpJAJjNxwpFT669VgN_RSjAohC6PfG0VdZLTEbt3C1shPi4w33kx3aEg/image-asset.png?format=300w',
-    msg: (
-      <>
-        <strong>STAY CONNECTED!</strong> Follow us on social media to get all
-        the latest news!
-      </>
-    ),
-  },
-];
+// const rules = [
+//   {
+//     label: '18-plus-only',
+//     iconSrc:
+//       'https://images.squarespace-cdn.com/content/v1/56e86bc3746fb97fd1a89e39/1458115713672-VHLML6G8UPU3C7RLVR1Y/ke17ZwdGBToddI8pDm48kATjjHbO0u7YsmshsWDVW4FZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7cf54ar7ioAkmCKAxvko3gxPWD2_Zf5awnkR6C4bwON4sSyY6-ivP3jpH0jzS1sCaw/Our+aim+is+for+SizeCon+to+be+a+place+for+anyone+of+age+%2818%2B%29+to+gather+and+share+their+love+for+size.+Even+with+this+focus%2C+we+want+the+convention+to+be+a+place+that%E2%80%99s+just+as+welcoming+to+friends+and+family%2C+and+really+just+anyone+curious+about+size+in+general.+Most+important+is+that%2C+no+matter+who+shows+up%2C+the+convention+is+a+positive+space+and%2C+of+course%2C+a+whole+lot+of+fun.+The+rules+that+follow+will+help+us+ensure+a+positive+and+welcoming+space.+If+an+attendee+injures+this+atmosphere+at+any+time%2C+in+any+way%2C+SizeCon+staff+reserve+the+right+to+remove+the+attendee+from+the+convention.+Rules+and+Information+SizeCon+volunteer+staff+will+be+visible+on+the+convention+floor+thanks+to+their+special+badges.+Please+do+not+hesitate+to+reach+out+to+our+volunteers+with+any+questions+or+concerns+you+may+have.+SizeCon+attendees+must+wear+their+badge+at+all+times+during+the+convention%2C+or+have+them+ready+to+show+to+staff+if+asked.+That+is+to+say%2C+not+just+anyone+will+be+able+to+wander+into+the+convention%3A+this+is+a+private+space%2C+for+us.+In+general%2C+SizeCon+has+a+non-sexual+atmosphere%2C+with+special+areas+and+attractions+labeled+for+containing+or+allowing+adult+content.+Sexual+discussion+is+welcome+and+encouraged%2C+but+please+be+considerate%3A+outside+of+specially+marked+areas%2C+attendees+will+have+a+visible+flag+on+their+badge+which+notes+the+attendee%E2%80%99s+comfort+level+with+sexual+discussion.+For+many%2C+size+is+a+fetish.+At+SizeCon%2C+we+welcome+that+fetish%2C+as+well+as+the+size+fascinated+in+general.+Verbal+or+physical+harassment+of+any+kind%2C+stalking%2C+and+unwelcome+attention+will+not+be+tolerated.+Any+offending+attendees+may+be+asked+to+separate%2C+or%2C+if+necessary%2C+removed+from+the+convention.+Heinous+offenders+will+be+reported+to+the+police.+Cosplay+is+welcome+and+encouraged+inside+of+the+convention.+However%2C+outside+of+the+convention+doors%2C+such+as+inside+of+the+hosting+hotel%2C+attendees+are+asked+to+adhere+to+what+is+generally+considered+appropriate.+Please+help+us+keep+SizeCon+clean+and+considerate%2C+by+putting+all+your+trash+in+garbage+bins%2C+and+by+keeping+noise+levels+down+outside+of+the+convention+rooms%2C+including+in+hotel+room+parties+during+and+after+SizeCon.?format=300w',
+//     msg: (
+//       <>
+//         Due to some of the material being sold at the convention, and the
+//         subject matter of some of our panels,{' '}
+//         <strong>SIZECON IS AN 18+ ONLY EVENT</strong>. However, SizeCon is not a
+//         strictly sexual event: anyone who loves size is welcome!
+//       </>
+//     ),
+//   },
+//   {
+//     label: 'judge-free',
+//     iconSrc:
+//       'https://images.squarespace-cdn.com/content/v1/56e86bc3746fb97fd1a89e39/1458115902315-KHFRRI8ZXQN1S2MSCU26/ke17ZwdGBToddI8pDm48kKAF85-Ra3izq36AdzLNBvtZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Wt5K3jmsiBpJAJjNxwpFT669VgN_RSjAohC6PfG0VdZLTEbt3C1shPi4w33kx3aEg/image-asset.png?format=300w',
+//     msg: (
+//       <>
+//         SizeCon is a <strong>JUDGE FREE</strong> space. We are male, female,
+//         gender-queer, LGBTQ, furry, lovers of fluffy and cruel fantasies alike.
+//         It doesn’t matter who or how we love, but what we love: our common size
+//         fascination is what’s bringing us all together.
+//       </>
+//     ),
+//   },
+//   {
+//     label: 'zero-tolerance',
+//     iconSrc:
+//       'https://images.squarespace-cdn.com/content/v1/56e86bc3746fb97fd1a89e39/1458115827707-COZHYX0WDZIOZT0DROAK/ke17ZwdGBToddI8pDm48kKAF85-Ra3izq36AdzLNBvtZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Wt5K3jmsiBpJAJjNxwpFT669VgN_RSjAohC6PfG0VdZLTEbt3C1shPi4w33kx3aEg/image-asset.png?format=300w',
+//     msg: (
+//       <>
+//         SizeCon has a <strong>ZERO TOLERANCE POLICY</strong> for harassment of
+//         any kind. To make sure all guests are comfortable during the event we
+//         will have security present at all times.
+//       </>
+//     ),
+//   },
+//   {
+//     label: 'stay-connected',
+//     iconSrc:
+//       'https://images.squarespace-cdn.com/content/v1/56e86bc3746fb97fd1a89e39/1458116270946-AI89JY5W5QFPBRQ1PGCL/ke17ZwdGBToddI8pDm48kKAF85-Ra3izq36AdzLNBvtZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Wt5K3jmsiBpJAJjNxwpFT669VgN_RSjAohC6PfG0VdZLTEbt3C1shPi4w33kx3aEg/image-asset.png?format=300w',
+//     msg: (
+//       <>
+//         <strong>STAY CONNECTED!</strong> Follow us on social media to get all
+//         the latest news!
+//       </>
+//     ),
+//   },
+// ];
 
 const Rules: React.FC = () => {
   return (

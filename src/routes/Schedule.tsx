@@ -110,10 +110,10 @@ const Schedule: React.FC = () => {
             <div className="mr-12 text-xl font-bold text-left">
               {event.name}
             </div>
-            <div className="text-left">
+            <div className="text-left text-lg">
               {getFormattedEventTime(event.begin, event.end)}
             </div>
-            <div className="text-left text-sm">{event.location}</div>
+            <div className="text-left">{event.location}</div>
           </button>
           <div className="w-2/12 pr-3">
             <button
