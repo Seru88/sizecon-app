@@ -72,7 +72,7 @@ const Schedule: React.FC = () => {
         </DayButton>
         {bookmarks && (
           <div className="ml-6">
-            <Toggle onChange={handleBookmarkToggle}/>
+            <Toggle onChange={handleBookmarkToggle} />
           </div>
         )}
       </div>
@@ -104,13 +104,16 @@ const Schedule: React.FC = () => {
       <li key={index}>
         <Card className="flex items-center justify-between my-4">
           <button
-            className="w-10/12 px-4 py-2"
+            className="w-10/12 p-2"
             onClick={handleClick(event.slug)}
           >
-            <div className="mr-12 text-xl font-bold text-left">{event.name}</div>
+            <div className="mr-12 text-xl font-bold text-left">
+              {event.name}
+            </div>
             <div className="text-left">
               {getFormattedEventTime(event.begin, event.end)}
             </div>
+            <div className="text-left text-sm">{event.location}</div>
           </button>
           <div className="w-2/12 pr-3">
             <button

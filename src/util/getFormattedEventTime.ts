@@ -1,5 +1,9 @@
-export default function getFormattedEventTime(begin: number, end: number | undefined) {
-  if (end === undefined) end = begin + 100;
+export default function getFormattedEventTime(
+  begin: number | string,
+  end: number | undefined
+) {
+  if (typeof begin === 'string') return begin;
+  else if (end === undefined) end = begin + 100;
   const bAP = begin >= 1200 ? 'PM' : 'AM';
   const eAP = end >= 1200 ? 'PM' : 'AM';
   if (begin >= 1300) begin -= 1200;

@@ -24,7 +24,7 @@ const Event: React.FC = () => {
       <div className="my-1 text-2xl">
         {getFormattedEventTime(event.begin, event.end)}
       </div>
-      <div className="my-1">Room: <strong>TBA</strong></div>
+      <div className="my-1">Location: {event.location}</div>
       {event.description &&
         event.description.split('\n').map((section, i) => (
           <p key={i} className="text-xl my-4">

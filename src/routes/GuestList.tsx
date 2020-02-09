@@ -61,7 +61,11 @@ const GuestList: React.FC = () => {
 
   return (
     <div className="h-screen">
-      <div className="flex items-center justify-between w-11/12 mx-auto mb-2">
+      <div
+        className={`flex items-center justify-between ${
+          bookmarks ? 'mx-0' : 'mx-auto'
+        } w-11/12 mb-2`}
+      >
         <GuestButton current={index === 0} onClick={handleGuestChange(0)}>
           Talents
         </GuestButton>
@@ -75,8 +79,8 @@ const GuestList: React.FC = () => {
           Writers
         </GuestButton>
         {bookmarks && (
-          <div className="m-2">
-            <Toggle onChange={handleCheckbox}/>
+          <div className="m-2 w-2/5">
+            <Toggle onChange={handleCheckbox} />
           </div>
         )}
       </div>

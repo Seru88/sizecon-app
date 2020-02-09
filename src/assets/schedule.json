@@ -7,19 +7,21 @@
         {
           "name": "Opening Ceremony",
           "slug": "opening-ceremony",
+          "location": "SALON C (PANELS)",
           "begin": 900,
           "description": "Size Con's Official kick-off ceremony with short speeches by those behind this one of a kind event!"
         },
         {
           "name": "Wonderland Way",
           "slug": "wonderland-way",
-          "begin": 900,
-          "end": 0,
+          "location": "Wonderland Way",
+          "begin": "ALL DAY",
           "description": "Attending SizeCon? Well you'll have to take a stroll through Wonderland Way, filled with size-related props to take photos with, vendors and tons of size related games for you to demo! If you ever need to take a break from the crowd, head on over to Wonderland Way where something fun is always going on!"
         },
         {
           "name": "The Vendor's Room",
           "slug": "the-vendors-room",
+          "location": "SALON D (VENDORS)",
           "begin": 930,
           "end": 2100,
           "description": "Have yourself edited into a size photo in real time, meet your favorite models, and buy prints, goods and services from our talented exhibitors. This year's Size Con will have a range of products available, including comic books, clothing, figurines, prints, badges, kinky toys, keychains and so much more!"
@@ -27,12 +29,14 @@
         {
           "name": "Newbies Social",
           "slug": "newbies-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 930,
           "description": "Across the country, and even abroad, we've all gathered here today because we all have one thing in common: OUR LOVE OF SIZE! What brought you to Size Con this year? What do you hope to gain from your time here? Mingle with fellow Size fans and let's get rid of those Size-Con jitters together!"
         },
         {
-          "name": "SizeCon Escape the Room",
-          "slug": "sizecon-escape-the-room",
+          "name": "Escape the Room",
+          "slug": "escape-the-room",
+          "location": "SALON D (VENDORS)",
           "begin": 1000,
           "end": 2100,
           "description": "SizeCon programming expands to include its first ESCAPE ROOM!\nAn enthusiastic attendee to SizeCon brought along a bottle marked \"Drink Me\" with the hopes of experiencing their fantasy. Well, the potion may have worked too well because that Con-goer is now missing. Certain items were left behind with clues too small to be seen...unless teams of people are shrunk down to one-sixth their size. Who's willing to take a fantastic voyage and solve this oversized mystery? Can it be done in forty-five minutes before the reduction process reverts? Come to SizeCon 2020 and find out!"
@@ -40,168 +44,226 @@
         {
           "name": "Real Life Expansion Workshop",
           "slug": "real-life-expansion-workshop",
+          "location": "SALON C (PANELS)",
           "begin": 1000,
           "description": "Join us for a live demonstration with your favorite expansion models performing live saline breast injections and belly inflating."
         },
         {
-          "name": "Underfoot Social",
-          "slug": "underfoot-social",
+          "name": "Size Wars",
+          "slug": "size-wars",
+          "location": "SALON B (EVENTS)",
           "begin": 1000,
-          "description": "Whether manicured or hairy, platformed or stinky, this is the one social dedicated to our Foot worshippers! Come and discuss your love of Size and Feet!"
+          "description": "Compete and don't be beat! Join us for this recurring, competitve game event, that includes crowd favorites like Cards Against Humanity and JackBox Games - SIZE themed!"
         },
+
         {
           "name": "Uneven and Extreme Size Social",
           "slug": "uneven-and-extreme-size-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1000,
           "description": "Do you like beings who can grow to planetary sizes? Or microscopic tinies? How about growth or shrinking that affects one body part at a time? If you've answered yes, you're in good company! Come join us for a hearty discussion on Uneven & Extreme Size!"
         },
         {
-          "name": "Katharine Gates: A Tour of the Erotic Edge",
-          "slug": "katherine-gates",
+          "name": "A Tour of the Erotic Edge with Katherine Gates",
+          "slug": "tour-of-the-erotic-edge",
+          "location": "SALON C (PANELS)",
           "begin": 1100,
           "description": "Meet Yale-Trained Anthropologist and Author Katharine Gates as she tells the stories behind her popular new book Deviant Desires: A Tour of the Erotic Edge."
         },
         {
-          "name": "MLM Social",
+          "name": "Size Ladies Social 🚺",
+          "slug": "size-ladies-social",
+          "location": "SALON B (EVENTS)",
+          "begin": 1100,
+          "description": "Meet Yale-Trained Anthropologist and Author Katharine Gates as she tells the stories behind her popular new book Deviant Desires: A Tour of the Erotic Edge."
+        },
+
+        {
+          "name": "⚣ MLM Social 🏳️‍🌈",
           "slug": "mlm-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1100,
           "description": "Welcome to the Men love Men social - A space at Size Con for men to talk to other men about their love for growing, shrinking and/or expanding dudes!"
         },
         {
-          "name": "Lunch Break",
-          "slug": "lunk-break",
-          "begin": 1200
-        },
-        {
           "name": "Cosplay Parade",
           "slug": "cosplay-parade",
+          "location": "SALON D (VENDORS)",
           "begin": 1245,
           "description": "Time to show off in our Cosplay Parade! Whether you’ve been working on an outfit from an established universe or a completely original character, have the kinkiest getup or your fiercest drag, break out your best costumes and show us what you’ve got! Size related costumes are encouraged!"
         },
         {
           "name": "BE Event: The B.o.O.B. Show",
           "slug": "be-event-the-boob-show",
+          "location": "SALON B (EVENTS)",
           "begin": 1300,
           "description": "Join a live audience for the live premiere of \"Busted or Outrageously Busted\", a question-and-answer game show where a bevy of contestants play to win the bustlines of their dreams without winning too much of a good thing! Featuring Host Bub Zealby."
         },
         {
+          "name": "BDSM 101 with TES",
+          "slug": "bdsm-101",
+          "location": "SALON C (PANELS)",
+          "begin": 1300,
+          "description": "The Eulenspiegel Society (TES) returns with a thorough rundown of BDSM and D/s practices, terminology, and events outside of Size Con to explore your own Power-Play fantasies."
+        },
+        {
           "name": "Tall Tails Social",
           "slug": "tall-tails-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1300,
           "description": "Furries unite! The furry-size community is robust, unique and growing! Let's discuss our love of size, paws, tails and sharp maws included!"
         },
         {
+          "name": "Underfoot Social",
+          "slug": "underfoot-social",
+          "location": "SALON A (SOCIALS)",
+          "begin": 1400,
+          "description": "Whether manicured or hairy, platformed or stinky, this is the one social dedicated to our Foot worshippers! Come and discuss your love of Size and Feet!"
+        },
+        {
           "name": "Relationships Panel",
           "slug": "relationship-panel",
+          "location": "SALON C (PANELS)",
           "begin": 1400,
           "description": "This panel is run by couples, sharing their experiences involving size dynamics in their relationships. The discussion will also include advice on coming out to a partner, exploring and sharing your desires with someone who wants to share in what you enjoy, and the lessons learned over time!"
         },
         {
-          "name": "Tans Size Social",
-          "slug": "trans-size-social",
+          "name": "Size Wars",
+          "slug": "size-wars",
+          "location": "SALON B (EVENTS)",
           "begin": 1400,
-          "description": "Welcome to the Trans size Social - This social is for those in the community who are Transgender and want to share their own unique life experiences, share Size fantasies and their own experiences in the Size Community."
+          "description": "Compete and don't be beat! Join us for this recurring, competitve game event, that includes crowd favorites like Cards Against Humanity and JackBox Games - SIZE themed!"
         },
+
         {
           "name": "Microphile Panel",
           "slug": "microphile-panel",
+          "location": "SALON C (PANELS)",
           "begin": 1500,
           "description": "This panel is all about those who like to grow to giant sizes or shrink others! Come join the discussion with our diverse group of panelists!"
         },
+
         {
-          "name": "Weight Gain Social",
-          "slug": "wight-gain-social",
+          "name": "Gender Fluidity & Size Social",
+          "slug": "gender-fluidity-and-size-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1500,
-          "description": "Consensual, intentional weight gain can be a hot button issue. Issues such as monetary the costs involved, lifestyle/health choices and social taboo all play a major role. Feeders, feedees, gainers, and anyone interested in discussing the ups and downs of the Weight Gain community are invited to join us for an hour long group discussion."
+          "description": "For those who enjoy exploring their size interest in a gender-fluid, gender-swapping or agender way."
+        },
+        {
+          "name": "D&D Campaign: SizeCon the RPG",
+          "slug": "dnd-campaign-sizecon-the-rpg",
+          "location": "SALON B (EVENTS)",
+          "begin": 1500,
+          "end": 1800,
+          "description": "There’s treasure to be grabbed, monsters to tackle, and traps to avoid, but this time our party of adventurers is going to have to deal with a different scale of challenge. Back by popular demand, join some of the best GMs from within the Size community to roll some dice and see just how dangerous a few magic spells in the wrong hands can be! Spots do fill up, so we highly suggest to Pre-Register now by contacting us at: sizeconrpg@gmail.com"
         },
         {
           "name": "Size History Panel",
           "slug": "size-history-panel",
+          "location": "SALON C (PANELS)",
           "begin": 1600,
           "description": "How did we as a community get here? Well, it's time you hear it straight from the lips of those who started it all! Featuring Bust-Artist, The-Minimizer, The Reducer, and other special guests!"
         },
         {
           "name": "Hungry Hunks Social",
           "slug": "hungry-hunks-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1600,
           "description": "Rumbly bellies make you weak, open maws make you moan, and the thought of being swallowed by a sexy Giant man drives you crazy! Vore fans unite and discuss hungry hunks who can't get enough tiny snacks like you! Hungry giants and foolish prey welcome."
         },
+
         {
-          "name": "D&D Campaign: SizeCon the RPG",
-          "slug": "dnd-campaign-sizecon-the-rpg",
-          "begin": 1600,
-          "end": 1900,
-          "description": "There’s treasure to be grabbed, monsters to tackle, and traps to avoid, but this time our party of adventurers is going to have to deal with a different scale of challenge. Back by popular demand, join some of the best GMs from within the Size community to roll some dice and see just how dangerous a few magic spells in the wrong hands can be! Spots do fill up, so we highly suggest to Pre-Register now by contacting us at: sizeconrpg@gmail.com"
-        },
-        {
-          "name": "Dirty Talk: Finding Your 'Filthy Voice'",
-          "slug": "dirty-talk-finding-your-filthy-voice",
+          "name": "Dirty Talk for the Kinkster with TES",
+          "slug": "dirty-talk-tes",
+          "location": "SALON C (PANELS)",
           "begin": 1700,
           "description": "Ever had a partner say something sexy that sent shivers down your spine, or got a text that kept you hard all day? Join Dee for an explicit talk about talking explicitly! We'll cover some different styles of dirty talk, communicating your preferences to your partner, and fun ways to utilize your \"filthy voice\" - both in and out of the bedroom."
         },
         {
-          "name": "Size Supporters Social",
-          "slug": "size-supporters-social",
+          "name": "Trans Size Social 🏳️‍🌈",
+          "slug": "trans-size-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1700,
-          "description": "We know. We're sometimes a lot to deal with. But we know you love us, because you're here at SizeCon celebrating with us! If you are not a size fan but here to support someone, stop by this social to speak with other folks who are also in relationships with a size partner or partners! Share experiences, tips, vent, etc. You are part of the community too, so feel free to participate in a casual, private setting, in a space just for you!"
+          "description": "Welcome to the Trans size Social - This social is for those in the community who are Transgender and want to share their own unique life experiences, share Size fantasies and their own experiences in the Size Community."
         },
+
         {
-          "name": "BDSM 101",
-          "slug": "bdsm-101",
+          "name": "Muscle Growth Social",
+          "slug": "muscle-growth-social",
+          "location": "SALON C (PANELS)",
           "begin": 1800,
-          "description": "The Eulenspiegel Society (TES) returns with a thorough rundown of BDSM and D/s practices, terminology, and events outside of Size Con to explore your own Power-Play fantasies."
+          "description": "For those who love the idea of hunky men getting bigger and bigger muscles! Come sit and discuss how your interests came to be and how you enjoy them today!"
         },
+
         {
-          "name": "The Fluffy Feels Social",
-          "slug": "the-fluffy-feels-social",
-          "begin": 1800,
-          "description": "Sometimes we just want to enjoy Size-play without the sex. Gather together to have a lighter, fluffier, and more traditionally romantic side of Size!"
-        },
-        {
-          "name": "Gulliveria Cafe",
+          "name": "Gulliveria's Giantess Cafe",
           "slug": "gulliveria-cafe",
+          "location": "SALON B (EVENTS)",
           "begin": 1800,
           "description": "Thirsty? Join us for an unforgettable Giantess experience at our new and improved interactive Role-Play and Variety Cafe Show experience! Headlined by the talented and beautiful Raquel Roper, we'll be featuring several acts by our crew of stunning Giantess performers - Entry is free, so don't miss it! Complementary Tea or Coffee is available if you can show Miss Kaneda and Giantess Hex you are worthy. Tips appreciated!"
         },
         {
-          "name": "Gulliverian Cafe",
+          "name": "Gulliverian' Giant Cafe",
           "slug": "gulliverian-cafe",
+          "location": "SALON B (EVENTS)",
           "begin": 1900,
           "description": "Thirsty? Join us for an unforgettable Giant Man experience at our new and improved interactive Role-Play and Variety Cafe Show experience! Headlined by the talented and hunky Miles Striker, featuring Leucan and his Magical Endoscope performance and GiantGripper's tantalizing burlesque - Entry is free, so don't miss it! Complementary Tea or Coffee is available if you can convice our staff of tall bois to even notice you."
         },
-        {
-          "name": "Gender Fluidity & Size Social",
-          "slug": "gender-fluidity-and-size-social",
-          "begin": 1900,
-          "description": "For those who enjoy exploring their size interest in a gender-fluid, gender-swapping or agender way."
-        },
+
         {
           "name": "Inflation & Expansion Panel",
           "slug": "inflation-and-expansion-panel",
-          "begin": 2000,
+          "location": "SALON C (PANELS)",
+          "begin": 1900,
           "description": "If you're fascinated by body parts swelling out of proportion, sometimes to absolutely absurd sizes, or love seeing characters inflated like balloons, this is the panel for you! Come join a robust discussion with our panel!"
         },
         {
           "name": "Welcome to the Darkside",
           "slug": "welcome-to-the-darkside",
+          "location": "SALON C (PANELS)",
           "begin": 2000,
           "description": "Not for the faint of heart! This panel is for lovers of size-related cruel delights - violence, humiliation, death. This panel will discuss size and the intersection of sadomasochism, self-acceptance, and embracing your sexuality."
         },
         {
-          "name": "The Blueberry Inflation Social",
-          "slug": "the-blueberry-inflation-social",
+          "name": "Size Supporters Social",
+          "slug": "size-supporters-social",
+          "location": "SALON A (SOCIALS)",
+          "begin": 2000,
+          "description": "We know. We're sometimes a lot to deal with. But we know you love us, because you're here at SizeCon celebrating with us! If you are not a size fan but here to support someone, stop by this social to speak with other folks who are also in relationships with a size partner or partners! Share experiences, tips, vent, etc. You are part of the community too, so feel free to participate in a casual, private setting, in a space just for you!"
+        },
+        {
+          "name": "Size Wars",
+          "slug": "size-wars",
+          "location": "SALON B (EVENTS)",
+          "begin": 2000,
+          "description": "Compete and don't be beat! Join us for this recurring, competitve game event, that includes crowd favorites like Cards Against Humanity and JackBox Games - SIZE themed!"
+        },
+        {
+          "name": "The Fluffy Feels Social",
+          "slug": "the-fluffy-feels-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 2100,
-          "description": "For those who like them round, juicy blueberries - come sit and discuss how your interests came to be and how you enjoy them today!"
+          "description": "Sometimes we just want to enjoy Size-play without the sex. Gather together to have a lighter, fluffier, and more traditionally romantic side of Size!"
         },
         {
           "name": "Playing Smart Workshop with Miles Striker",
           "slug": "playing-smart-workshop",
+          "location": "SALON C (PANELS)",
           "begin": 2100,
           "description": "Interested in how to convert your fantasies into real life roleplay? Learn BDSM basics from Pro-Dom Miles Striker, where he'll show you how to whip, slap, choke, and more - the safe way! We highly reccomend attending this class if you'll be attending our Playroom."
         },
         {
+          "name": "Weight Gain Social",
+          "slug": "wight-gain-social",
+          "location": "SALON B (EVENTS)",
+          "begin": 2100,
+          "description": "Consensual, intentional weight gain can be a hot button issue. Issues such as monetary the costs involved, lifestyle/health choices and social taboo all play a major role. Feeders, feedees, gainers, and anyone interested in discussing the ups and downs of the Weight Gain community are invited to join us for an hour long group discussion."
+        },
+        {
           "name": "SizeCon Playroom",
           "slug": "sizecon-playroom",
+          "location": "SALON B (EVENTS)",
           "begin": 2200,
           "end": 0,
           "description": "Join us for a casual gathering where fantasy meets reality in SizeCon's first ever Playroom - Go on get your roleplay on! Feel free to chitchat with your friends, humiliate your tiny submissive in front of everyone or both! Participation is optional. While some equipment maybe available for use, any personal items (i.e. ropes, toys, etc) must be provided by you. Optional nudity will be allowed after 11PM."
@@ -209,6 +271,7 @@
         {
           "name": "Ant-man and The Wasp",
           "slug": "ant-man-and-the-wasp",
+          "location": "SALON A (SOCIALS)",
           "begin": 2200,
           "end": 0,
           "description": "Watch Marvel's 2018 film Antman & the Wasp with the most awesome crowd ever!"
@@ -216,6 +279,7 @@
         {
           "name": "Adult Swim Pool Party",
           "slug": "adult-swim-pool-party",
+          "location": "Hotel Pool Room",
           "begin": 0,
           "end": 200,
           "description": "Kid's out of the pool - it's Adult Swim! While the convention floor is closed, the party continues at the Radisson's indoor pool and jacuzzi. Join this SizeCon attendee exclusive party where clothes are optional and respect for fellow attendees is mandatory."
@@ -229,33 +293,45 @@
         {
           "name": "Wonderland Way",
           "slug": "wonderland-way",
-          "begin": 900,
-          "end": 0,
+          "location": "Wonderland Way",
+          "begin": "ALL DAY",
           "description": "Attending SizeCon? Well you'll have to take a stroll through Wonderland Way, filled with size-related props to take photos with, vendors and tons of size related games for you to demo! If you ever need to take a break from the crowd, head on over to Wonderland Way where something fun is always going on!"
         },
 
         {
           "name": "The Vendor's Room",
           "slug": "the-vendors-room",
-          "begin": 930,
+          "location": "SALON D (VENDORS)",
+          "begin": 900,
           "end": 2100,
           "description": "Have yourself edited into a size photo in real time, meet your favorite models, and buy prints, goods and services from our talented exhibitors. This year's Size Con will have a range of products available, including comic books, clothing, figurines, prints, badges, kinky toys, keychains and so much more!"
         },
         {
+          "name": "The Blueberry Inflation Social",
+          "slug": "blueberry-inflation-social",
+          "location": "SALON C (PANELS)",
+          "begin": 900,
+          "description": "For those who like them round, juicy blueberries - come sit and discuss how your interests came to be and how you enjoy them today!"
+        },
+
+        {
           "name": "Day 1 Thoughts Social",
           "slug": "day-1-thoughts-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 900,
           "description": "Have yourself edited into a size photo in real time, meet your favorite models, and buy prints, goods and services from our talented exhibitors. This year's Size Con will have a range of products available, including comic books, clothing, figurines, prints, badges, kinky toys, keychains and so much more!"
         },
         {
           "name": "Size Wars",
           "slug": "size-wars",
+          "location": "SALON B (EVENTS)",
           "begin": 900,
           "description": "Compete and don't be beat! Join us for this recurring, competitve game event, that includes crowd favorites like Cards Against Humanity and JackBox Games - SIZE themed!"
         },
         {
-          "name": "SizeCon Escape the Room",
-          "slug": "sizecon-escape-the-room",
+          "name": "Escape the Room",
+          "slug": "escape-the-room",
+          "location": "SALON D (VENDORS)",
           "begin": 1000,
           "end": 2100,
           "description": "SizeCon programming expands to include its first ESCAPE ROOM!\nAn enthusiastic attendee to SizeCon brought along a bottle marked \"Drink Me\" with the hopes of experiencing their fantasy. Well, the potion may have worked too well because that Con-goer is now missing. Certain items were left behind with clues too small to be seen...unless teams of people are shrunk down to one-sixth their size. Who's willing to take a fantastic voyage and solve this oversized mystery? Can it be done in forty-five minutes before the reduction process reverts? Come to SizeCon 2020 and find out!"
@@ -263,18 +339,21 @@
         {
           "name": "The Silver Social",
           "slug": "the-silver-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1000,
           "description": "This social is specifically for the wisests of SizeCon attendees - Our pre-internet Seniors, Boomers, and GenX'ers gather to discuss their personal Size experiences. Whether that be relationships, goals, or even more serious topics."
         },
         {
           "name": "Collaging Workshop",
           "slug": "collaging-workshop",
+          "location": "SALON C (PANELS)",
           "begin": 1000,
           "description": "Come meet some of your favorite collage artists as they share some tips, talk techniques and explore what it takes to make a great digital image."
         },
         {
           "name": "Hunky Giant Massages",
           "slug": "hunky-giant-massages",
+          "location": "SALON B (EVENTS)",
           "begin": 1000,
           "end": 1200,
           "description": "Exhausted from your first day at SizeCon? Have our team of hunky Giant professional masseurs let your body melt in their massive hands with a one-of-a-kind massage! $25 for 15 minute sessions"
@@ -282,23 +361,21 @@
         {
           "name": "Content Producer Q&A",
           "slug": "content-producer-qna",
+          "location": "SALON C (PANELS)",
           "begin": 1100,
           "description": "What’s it like working in the adult industry? How hard is it to break into creating content professionally? What determines the kind of content that gets made? Come spend some time with our panel of professionals from across the adult industry, learn what goes on behind the scenes to create fantastic content, and take some time to discuss what you want to see in upcoming projects!"
         },
         {
           "name": "The Switch Social",
           "slug": "the-switch-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1100,
           "description": "SizeCon programming expands to include its first ESCAPE ROOM!\nAn enthusiastic attendee to SizeCon brought along a bottle marked \"Drink Me\" with the hopes of experiencing their fantasy. Well, the potion may have worked too well because that Con-goer is now missing. Certain items were left behind with clues too small to be seen...unless teams of people are shrunk down to one-sixth their size. Who's willing to take a fantastic voyage and solve this oversized mystery? Can it be done in forty-five minutes before the reduction process reverts? Come to SizeCon 2020 and find out!"
         },
         {
-          "name": "Lunch Break",
-          "slug": "lunch-break",
-          "begin": 1200
-        },
-        {
           "name": "Cosplay Parade",
           "slug": "cosplay-parade",
+          "location": "SALON D (VENDORS)",
           "begin": 1250,
           "end": 1300,
           "description": "Time to show off in our Cosplay Parade! Whether you’ve been working on an outfit from an established universe or a completely original character, have the kinkiest getup or your fiercest drag, break out your best costumes and show us what you’ve got! Size related costumes are encouraged!"
@@ -306,66 +383,77 @@
         {
           "name": "Body Morph Workshop",
           "slug": "body-morph-workshop",
+          "location": "SALON C (PANELS)",
           "begin": 1300,
           "description": "Expansion fans rejoice! Whether its a padded muscle suit or a specially designed Breast Expansion rig, join in as several prop creators put their heads together and discuss different ways to approach creating costuming solutions towards all sorts of fantasies. We just may have a few supplies to share, for those interested in learning a bit about constructing new props themselves. Get ready for some BIG surprises!"
         },
         {
           "name": "Shrinkin' Ladies Cafe",
           "slug": "shrinkin-ladies-cafe",
+          "location": "SALON B (EVENTS)",
           "begin": 1300,
           "description": "Featuring tiny artists Jitensha, Morgana, Chibiana and other size talent, come and enjoy the company of Size Con's gradually dwindling crew at our new and improved interactive Role-Play and variety show experience - The show is free so don't miss it! Based on the \"Maid Cafe\" format, we'll be serving complementary coffee and tea. Tips appreciated!"
         },
         {
           "name": "Hungry Hunnies Social",
           "slug": "hungry-hunnies-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1300,
           "description": "Rumbly bellies make you weak, open maws make you moan, and the thought of being swallowed by a sexy Giantess drives you crazy! Vore fans unite and discuss hungry hunnies who can't get enough tiny snacks like you! Hungry giantesses and foolish prey welcome."
         },
         {
           "name": "Stigma, Sexual Variations, & Content Creators",
           "slug": "stigma-variations-creators",
+          "location": "SALON C (PANELS)",
           "begin": 1400,
           "description": "Sexuality has had a tangled history over the past century, especially when it comes to deviation. However, with the advent of the internet, the ways we express and live with our sexualities have changed dramatically. Why is this? How do people navigate the social minefield of living through making porn? How are sexual variations seen from an academic viewpoint? Join Alex Fort as he describes his exploratory research into the merging of sexuality, society, and science."
         },
         {
           "name": "Giant Men & Tiny ladies Social",
           "slug": "giant-men-tiny-ladies-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1400,
           "description": "Whether romantic or domineering, Giant Men and Tiny ladies gather for a deep dive on what makes you tick!"
         },
         {
           "name": "Size Wars",
           "slug": "size-wars",
+          "location": "SALON B (EVENTS)",
           "begin": 1400,
           "description": "Compete and don't be beat! Join us for this recurring, competitve game event, that includes crowd favorites like Cards Against Humanity and JackBox Games - SIZE themed!"
         },
         {
           "name": "Weight Gain Bazaar",
           "slug": "weight-gain-bazaar",
+          "location": "SALON B (EVENTS)",
           "begin": 1500,
           "description": "Come one, come all! Pick up your BIG BUCKS at the Weight Gain Bazaar and help one lucky lady grow exponentially bigger, better and sexier!"
         },
         {
           "name": "Owning What You Love Panel",
           "slug": "owning-what-you-love",
+          "location": "SALON C (PANELS)",
           "begin": 1500,
           "description": "Regardless of what area of the Size community we call home, everyone has dealt with guilt, shame, and anxiety over the things they're drawn to. The thought of opening up to a partner about the things closest to our hearts can be challenging. We will examine the various issues that crop up on the road to self acceptance and discuss strategies for becoming more confident in the desires we have."
         },
         {
           "name": "The Male Expanding Social",
           "slug": "male-expanding-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1500,
           "description": "For fans of sexy dudes expanding, growing, inflating, weight gaining and more! Come sit and discuss how your interests came to be and how you enjoy them today!"
         },
         {
           "name": "Macrophile Panel",
           "slug": "macrophile",
+          "location": "SALON C (PANELS)",
           "begin": 1600,
           "description": "This panel is all about those who love Giants and Giantesses! Come join the discussion with our diverse group of panelists!"
         },
         {
           "name": "D&D Campaign: SizeCon the RPG",
           "slug": "dnd-campaign-sizecon-the-rpg",
+          "location": "SALON B (EVENTS)",
           "begin": 1600,
           "end": 1900,
           "description": "If you missed yesterday's event, now's your chance! There’s treasure to be grabbed, monsters to tackle, and traps to avoid, but this time our party of adventurers is going to have to deal with a different scale of challenge. Back by popular demand, join some of the best GMs from within the Size community to roll some dice and see just how dangerous a few magic spells in the wrong hands can be! Spots do fill up, so we highly suggest to Pre-Register now by contacting us at: sizeconrpg@gmail.com"
@@ -373,78 +461,98 @@
         {
           "name": "The Breast Expanding Social",
           "slug": "breast-expanding-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1600,
           "description": "For fans of breast that keep getting bigger and bigger and bi-- well you get the picture. Come sit and discuss how your interests came to be and how you enjoy them today!"
         },
         {
           "name": "Diversity in the Size Community",
           "slug": "breast-expanding-social",
+          "location": "SALON C (PANELS)",
           "begin": 1700,
           "description": "As our community grows (and shrinks… and expands…) more and more people are getting exposed to different forms of Size-based erotica. What does this mean for the future of the Size community? What is the role of the LGBTQ community within the things we love and what unique perspectives can we bring to the table? What can be done to reduce bullying in the community and to encourage women and minorities as creators? What stories would you like to share? Join us for a discussion that aims to give time in the spotlight to often overlooked portions of our world."
         },
         {
           "name": "Power Play Social",
           "slug": "power-play-social",
-          "begin": 1800,
+          "location": "SALON A (SOCIALS)",
+          "begin": 1700,
           "description": "For those interested in BDSM, D/s relationships, etc. Come meet with other naughty kinksters and share your stories or learn more about the lifestyle. Run by Pro-Dom Miles Striker."
         },
         {
           "name": "Writer's Workshop",
           "slug": "writers-workshop",
+          "location": "SALON C (PANELS)",
           "begin": 1800,
           "description": "In this panel, writers come together to discuss the art of creating size content through the written word. Share tips, give advice, and network with your favorite writers!"
         },
         {
-          "name": "Spanish Social",
+          "name": "Spanish Social 🇪🇸🌎",
           "slug": "writers-workshop",
-          "begin": 1900,
+          "location": "SALON A (SOCIALS)",
+          "begin": 1800,
           "description": "¿Eres fanático de Gigantes, gente diminuto, expansión de pecho o otros fetiches? ¡Bueno, discuta con sus nuevos amigos en tu idioma!"
         },
         {
           "name": "Giantess & Tiny Men Social",
           "slug": "giantess-tiny-men-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 1900,
           "description": "Whether romantic or domineering, Giantess' and Tiny men gather for a deep dive on what makes you tick!"
         },
         {
-          "name": "Women Love Women Social",
-          "slug": "women-love-women-social",
+          "name": "The Flourish of Fetish: Everybody's Got Their Something with I. Que Grande",
+          "slug": "flourish-of-fetish",
+          "location": "SALON C (PANELS)",
+          "begin": 1900,
+          "description": "I. Que Grande began his career in adult entertainment on the fringe of the gay porn industry. 12 years later, having produced thousands of scenes and hundreds of films in what is now the mainstream in both gay and straight porn, Grande now looks towards an alternative revolution in the limitless expressions of human sexuality. From the fetishes, to the kinks, to the “ Philias,” we all have so much to offer as people become more liberated in their skin."
+        },
+        {
+          "name": "⚢ WLW Social 🏳️‍🌈",
+          "slug": "wlw-social",
+          "location": "SALON B (EVENTS)",
           "begin": 1900,
           "description": "Welcome to the Women love Women social - A space at Size Con for women to talk to other women about their love for growing, shrinking and/or expanding ladies!"
         },
         {
           "name": "The Darkside Social",
           "slug": "darkside-social",
+          "location": "SALON A (SOCIALS)",
           "begin": 2000,
           "description": "Not for the faint of heart! This social is for lovers of size-related cruel delights - violence, humiliation, death who want to discuss it in a more intimate setting."
         },
         {
           "name": "The Ass Expansion Social",
           "slug": "ass-expansion-social",
+          "location": "SALON B (EVENTS)",
           "begin": 2000,
           "description": "Baby got back! For fans of booties that keep getting bigger and bigger and bi-- well you get the picture. Come sit and discuss how your interests came to be and how you enjoy them today!"
         },
         {
           "name": "Size Wars",
           "slug": "size-wars",
+          "location": "SALON C (PANELS)",
           "begin": 2000,
           "description": "Compete and don't be beat! Join us for this recurring, competitve game event, that includes crowd favorites like Cards Against Humanity and JackBox Games - SIZE themed!"
         },
         {
           "name": "Closing Ceremony",
           "slug": "closing-ceremony",
+          "location": "SALON C (PANELS)",
           "begin": 2100,
           "description": "While SizeCon is not over yet, we provide a few parting words from the Size Con Crew. This is the time where we give thanks to our awesome guests and dedicated volunteers with a quick video presentation. Thank you all for another great convention!"
         },
         {
           "name": "Silent Charity Auction",
           "slug": "silent-charity-auction",
+          "location": "SALON C (PANELS)",
           "begin": 2200,
           "description": "Want to support a noble cause? Want to get some really awesome swag from some of your favorite artists and writers? Come fill out our silent charity auction form and do both at the same time! 100% of the proceeds from this event will be donated to the Human Rights Campaign. More information available at https://www.hrc.org/."
         },
         {
           "name": "The Secret World of Arietty",
           "slug": "secret-world-arietty",
+          "location": "SALON A (SOCIALS)",
           "begin": 2200,
           "end": 0,
           "description": "Watch Ghibli's beautifully animated 2010 film The Secret World of Arietty with the most awesome crowd ever!"
@@ -452,6 +560,7 @@
         {
           "name": "SizeCon Playroom",
           "slug": "sizecon-playroom",
+          "location": "SALON B (EVENTS)",
           "begin": 2200,
           "end": 0,
           "description": "Join us for a casual gathering where fantasy meets reality in SizeCon's first ever Playroom - Go on get your roleplay on! Feel free to chitchat with your friends, humiliate your tiny submissive in front of everyone or both! Participation is optional. While some equipment maybe available for use, any personal items (i.e. ropes, toys, etc) must be provided by you. Optional nudity will be allowed after 11PM."
@@ -459,12 +568,14 @@
         {
           "name": "The Reflection Social",
           "slug": "reflection-social",
+          "location": "SALON C (PANELS)",
           "begin": 2300,
           "description": "As we wind down for the end of Size Con 2020, let's discuss what we learned and gained, what our hopes and aspirations are for this community, and let us know what you thought of the event! And of course, don't forget to keep in touch with your new friends!"
         },
         {
           "name": "SizeCon 2020 is Officially Over!",
           "slug": "sizecon-2020-officially-over",
+          "location": "",
           "begin": 0,
           "description": "We made it! Great job everyone! Volunteers who want to help stay and clean up are extremely appreciated."
         }
