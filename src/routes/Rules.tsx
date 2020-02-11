@@ -1,5 +1,6 @@
 import React from 'react';
 import classed from 'classed-components';
+import badge_example from '../assets/badge-example.jpeg'
 
 const H3 = classed('h3')`
   my-2
@@ -92,6 +93,12 @@ const Rules: React.FC = () => {
         comfortable with adult content and discussions. Please be considerate of
         attendees unwilling to discuss in such a manner!
       </P>
+      <p>
+        Below is an example of a badge:
+      </p>
+      <div className="w-full p-1 mb-8">
+        <img width="100%" height="auto" src={badge_example} alt="badge-example"/>
+      </div>
       <H3>NO PHOTOS OR VIDEOS ON THE CON FLOOR</H3>
       <P>
         Attendees are asked to apply stickers to their phone cameras while
