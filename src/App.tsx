@@ -1,34 +1,30 @@
 import { library as iconLibray } from '@fortawesome/fontawesome-svg-core';
-import {
-  faDiscord,
-  faGoogle,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faBookmark as farBookmark } from '@fortawesome/free-regular-svg-icons';
 import {
   faArrowLeft,
   faBookmark,
   faCalendar,
+  faCircleNotch,
   faEnvelope,
   faGavel,
+  faHeart,
   faMap,
-  faPlus,
   faMinus,
+  faPlus,
   faSearchLocation,
   faSignInAlt,
   faSignOutAlt,
   faStar,
   faUserPlus,
-  faHeart,
-  faCircleNotch,
 } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 import AlertProvider from './containers/AlertProvider';
 import routes from './routes';
 import firebaseApp from './util/firebaseApp';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 iconLibray.add(
   faCalendar,
